@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Elena Rashkovan](https://up.htmlacademy.ru/adaptive/7/user/196306).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская](https://up.htmlacademy.ru/adaptive/7/user/29644).
 
 ---
 

@@ -1,0 +1,38 @@
+@import 'utils/mixins',
+        'utils/variables';
+
+.page-footer {
+  /* обводка */
+  outline: 2px solid red;
+  background-color: rgba(255, 45, 82, 0.2); 
+
+  @include container();
+  min-height: 233px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.page-footer__title {
+  margin: 0;
+  padding: 29px 0 40px;
+
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000;
+}
+
+.page-footer__social {
+
+}
+
+.page-footer__copyright {
+  font-size: 14px;
+  line-height: 26px;
+  color: #000;
+}
+
+.page-footer__copyright-link {
+
+}

@@ -52,16 +52,6 @@
 
 }
 
-.review__form-legend {
-  position: absolute;
-  top: 24px;
-  left: 0;
-
-  width: 100%;
-  text-align: center;
-
-}
-
 .review__form-label {
   margin: 0;
   padding: 0;
@@ -74,18 +64,24 @@
 
 }
 
-.review__form-fieldset {
-  position: relative;
+.review__form-legend {
+/*
+  position: absolute;
+  top: 24px;
+  left: 0;
+*/
+  padding-top: 22px;
+}
 
+.review__form-fieldset {
   margin: 0;
-  padding-top: 65px; 
+  padding-top: 24px; 
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 25px; 
 
   border: none;
-  border-top: 1px solid $border-color;
-
+//  border-top: 1px solid $border-color;
 
   input[type="text"],
   input[type="tel"],

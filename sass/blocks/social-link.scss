@@ -1,0 +1,29 @@
+@import 'utils/variables';
+
+.social-link {
+	display: inline-block;
+	margin-right: 6px;
+	height: 46px;
+	width: 46px;
+	background-color: $accent-color;
+	vertical-align: middle;
+      font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+
+	&--tw {
+		background-image: url('/img/icon-twitter.svg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+	&--fb {
+    background-image: url('/img/icon-facebook.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;    
+  }
+	&--yt {
+    background-image: url('/img/icon-youtube.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

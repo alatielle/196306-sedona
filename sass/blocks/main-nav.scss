@@ -1,0 +1,66 @@
+@import 'utils/mixins';
+@import 'utils/variables';
+
+.main-nav {
+  /* обводка */
+  background: rgba(0, 0, 0, 0.2);
+  outline: 2px solid rgba(0, 0, 0, 0.9);
+
+  @include container();
+
+  &--opened {
+    min-height: 223px;
+  }
+}
+
+.main-nav__toggle {
+
+}
+
+.main-nav__items {
+  margin: 0;
+  padding: 0;
+  
+  list-style: none;
+
+  a {
+    padding: 7px 0 7px;
+
+    display: block;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 40px;
+    color: #fff;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;   
+  }
+
+}
+
+.main-nav__item {
+  //высота 55 пикселей
+  background-color: $accent-color;
+
+  border-top: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(1,1,1,0.2);
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    // В макете не тень, а картинка!
+    -webkit-box-shadow: inset 0px -5px 7px -7px rgba(1,1,1,1);
+       -moz-box-shadow: inset 0px -5px 7px -7px rgba(1,1,1,1);
+            box-shadow: inset 0px -5px 7px -7px rgba(1,1,1,1);
+  }
+
+  &--active {
+
+  }
+}
+

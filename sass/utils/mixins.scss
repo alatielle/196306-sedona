@@ -1,0 +1,32 @@
+@mixin zero-centered() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container() {
+  width: $width-small;
+  margin: 0 auto;
+
+/*
+  @media #{$tablet-widths} {
+    width: $width-medium;
+  }
+
+  @media #{$desktop-widths} {
+    width: $width-large;
+  }
+*/  
+}

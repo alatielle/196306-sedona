@@ -1,0 +1,44 @@
+@import 'utils/variables';
+
+.page-header {
+  /* обводка */
+  outline: 2px solid green;
+  background: rgba(128, 255, 128, 0.25);
+}
+
+.page-header__logo {
+  width: 103px;
+	height: 83px;
+
+	margin: 0 auto;
+}
+
+.page-header__banner {
+  /* обводка */
+  outline: 2px solid red;
+  background-color: rgba(255, 45, 82, 0.2); 
+
+  margin: 0 auto;
+
+  background-image: url('../img/bg-back-mobile@1x.jpg');
+  background-repeat: no-repeat;
+
+  &--welcome {
+    height: 389px;
+    background-position: 50%;
+  }
+
+  &--small {
+    height: 214px;
+    background-position: 50% -175px;
+  }
+}
+
+.page-header__top-menu {
+  min-height: 56px;
+
+  margin: -83px auto 0;
+
+  background-color: white;
+
+}

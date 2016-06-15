@@ -9,7 +9,6 @@
   @include container();
 
   &--opened {
-    min-height: 223px;
   }
 }
 
@@ -18,6 +17,8 @@
 }
 
 .main-nav__items {
+  min-height: 223px; /* временно для сетки */
+
   margin: 0;
   padding: 0;
   
@@ -64,3 +65,22 @@
   }
 }
 
+@media #{$tablet-widths} {
+  .main-nav {
+    width: auto;
+    min-height: 56px;
+  }
+
+  .main-nav__wrapper {
+    @include container();
+    @include clearfix();
+  }
+
+  .main-nav__items {
+    min-height: 56px; /* Временно для сетки */
+  }
+}
+
+@media #{$desktop-widths} {
+
+}

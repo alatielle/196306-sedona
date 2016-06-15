@@ -11,7 +11,9 @@
   outline: 2px solid green;
   background: rgba(128, 255, 128, 0.25);
 
-  padding-top: 42px;
+  min-height: 117px; /* временно для сетки */
+
+  padding-top: 41px;
   padding-right: 22px;
   padding-bottom: 31px;
   padding-left: 22px;
@@ -19,6 +21,43 @@
   text-transform: uppercase;
   text-align: center;
 
+}
+
+.photo__list {
+  /* обводка */
+  background: rgba(0, 0, 0, 0.2);
+  outline: 2px solid rgba(0, 0, 0, 0.9);
+
+  min-height: 1662px; /* временно для сетки */
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media #{$tablet-widths} {
+  .photo__header {
+    min-height: 103px;
+
+    padding-top: 72px;
+    padding-bottom: 73px;
+  }
+
+  .photo__list {
+    min-height: 1174px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .photo__header {
+    padding-top: 109px;
+    padding-bottom: 75px;
+  }
+
+  .photo__list {
+    min-height: 667px;
+  }  
 }
 
 .photo__title {
@@ -35,17 +74,6 @@
   font-size: 14px;
   line-height: 24px;
   color: #333;
-}
-
-.photo__list {
-  /* обводка */
-  background: rgba(0, 0, 0, 0.2);
-  outline: 2px solid rgba(0, 0, 0, 0.9);
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }
 
 .photo__item {

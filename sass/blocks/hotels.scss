@@ -4,12 +4,10 @@
 .hotels {
   /* обводка */
   outline: 2px solid red;
-  background-color: rgba(255, 45, 82, 0.2); 
+  background-color: rgba(255, 45, 82, 0.2);
   
   @include container();
-}
-
-.hotels__wrapper {
+  min-height: 637px; /* временно для сетки */
 }
 
 .hotels__header {
@@ -17,8 +15,10 @@
   outline: 2px solid green;
   background: rgba(128, 255, 128, 0.25);
 
+  min-height: 111px; /* временно для сетки */
+
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 39px;
 
   text-transform: uppercase;
   text-align: center;
@@ -30,6 +30,29 @@
     font-size: 14px;
     line-height: 24px;
     color: #333;
+  }
+}
+
+@media #{$tablet-widths} {
+  .hotels {
+    min-height: 668px;
+  }
+
+  .hotels__header {
+    min-height: 104px;
+
+    padding-top: 53px;
+    padding-bottom: 45px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .hotels {
+    min-height: 681px;
+  }
+
+  .hotels__header {
+    padding-bottom: 50px;
   }
 }
 

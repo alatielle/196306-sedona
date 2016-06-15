@@ -1,37 +1,78 @@
+@import 'utils/mixins';
 @import 'utils/variables';
 
 .page-header {
   /* обводка */
   outline: 2px solid green;
   background: rgba(128, 255, 128, 0.25);
-}
 
-.page-header__logo {
-  width: 103px;
-	height: 83px;
+  position: relative;
 
-	margin: 0 auto;
+  @include container();
+  min-height: 668px; /* временно для сетки */
+
+  &--not-main {
+    min-height: 437px; /* временно для сетки */    
+  }
+
 }
 
 .page-header__banner {
   /* обводка */
   outline: 2px solid red;
-  background-color: rgba(255, 45, 82, 0.2); 
+  background-color: rgba(255, 45, 82, 0.2);
 
-  margin: 0 auto;
+  width: 100%;
 
-  background-image: url('../img/bg-back-mobile@1x.jpg');
-  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+
+//  background-image: url('../img/bg-back-mobile@1x.jpg');
+//  background-repeat: no-repeat;
 
   &--welcome {
-    height: 389px;
-    background-position: 50%;
+    height: 445px;
+//    background-position: 50% bottom;
   }
 
   &--small {
     height: 214px;
-    background-position: 50% -175px;
   }
+}
+
+@media #{$tablet-widths} {
+  
+  .page-header {
+    min-height: 56px; /* минимальная высота содержания */
+  }
+
+  .page-header__banner {
+    position: static;
+    margin-top: -56px;
+
+    &--welcome {
+      height: 574px;
+    }
+    &--small {
+      height: 346px;
+    }
+  }
+
+}
+
+@media #{$desktop-widths} {
+  .page-header__banner {
+    &--small {
+      height: 357px;
+    }    
+  }
+}
+
+.page-header__logo {
+  height: 83px;
+  width: 103px;
+
+  margin: 0 auto;
 }
 
 .page-header__top-menu {
@@ -42,3 +83,10 @@
   background-color: white;
 
 }
+
+/*
+  &--small {
+    height: 214px;
+    background-position: 50% -175px;
+  }
+*/

@@ -1,5 +1,4 @@
 @import
-//  'blocks/i-font',
   'blocks/page-header',
   'blocks/main-nav',
   'blocks/reasons',
@@ -16,6 +15,7 @@
   'blocks/radio-indicator';
 
 @import
+'utils/outlines',
   'utils/mixins',
   'utils/variables',
   'utils/scaffolding';

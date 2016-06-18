@@ -3,9 +3,6 @@
   'utils/variables';
 
 .reasons {
-  margin: 0;
-  padding: 0;
-
   @include container();
 }
 
@@ -14,9 +11,11 @@
   outline: 2px solid green;
   background: rgba(128, 255, 128, 0.25);
 
-  padding-top: 45px;
+  min-height: 148px; /* временно для сетки */
+
+  padding-top: 44px;
   padding-right: 20px;
-  padding-bottom: 46px;
+  padding-bottom: 29px;
   padding-left: 20px;
 
   text-transform: uppercase;
@@ -49,6 +48,8 @@
   background: rgba(0, 0, 0, 0.2);
   outline: 2px solid rgba(0, 0, 0, 0.9);
   
+  min-height: 1841px; /* временно для сетки */
+
   margin: 0;
   padding: 0;
 
@@ -109,3 +110,16 @@
 
 }
 
+@media #{$tablet-widths} {
+
+  .reasons__header {
+    min-height: 99px; /* временно для сетки */
+
+    padding-top: 52px;
+    padding-bottom: 55px;
+  }
+
+  .reasons__list {
+    min-height: 1098px;
+  }
+}

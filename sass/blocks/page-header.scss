@@ -1,44 +1,48 @@
 @import 'utils/mixins';
 @import 'utils/variables';
 
-.page-header {
-  /* обводка */
-  outline: 2px solid green;
-  background: rgba(128, 255, 128, 0.25);
+.page-header__logo {
+  height: 83px;
 
-  position: relative;
+  text-align: center;
+}
+
+.page-header__logo img {
+  width: 103px; 
+  height: 83px;
+}
+
+.page-header__top-menu {
+  min-height: 56px;
+
+  margin: -83px auto 0;
+
+  background-color: white;
+}
+
+.page-header {
 
   @include container();
-  min-height: 668px; /* временно для сетки */
-
-  &--not-main {
-    min-height: 437px; /* временно для сетки */    
-  }
 
 }
 
 .page-header__banner {
-  /* обводка */
-  outline: 2px solid red;
-  background-color: rgba(255, 45, 82, 0.2);
-
   width: 100%;
 
-  position: absolute;
-  bottom: 0;
-
-//  background-image: url('../img/bg-back-mobile@1x.jpg');
-//  background-repeat: no-repeat;
+  background-image: url('../img/bg-back-mobile@1x.jpg');
+  background-repeat: no-repeat;
 
   &--welcome {
     height: 445px;
-//    background-position: 50% bottom;
+    background-position: 50% bottom;
   }
 
   &--small {
     height: 214px;
+    background-position: 50% -175px;
   }
 }
+
 
 @media #{$tablet-widths} {
   
@@ -47,8 +51,9 @@
   }
 
   .page-header__banner {
-    position: static;
-    margin-top: -56px;
+
+//    background-image: url('../img/bg-back-desktop@1x.jpg');
+    background-image: none;
 
     &--welcome {
       height: 574px;
@@ -67,26 +72,3 @@
     }    
   }
 }
-
-.page-header__logo {
-  height: 83px;
-  width: 103px;
-
-  margin: 0 auto;
-}
-
-.page-header__top-menu {
-  min-height: 56px;
-
-  margin: -83px auto 0;
-
-  background-color: white;
-
-}
-
-/*
-  &--small {
-    height: 214px;
-    background-position: 50% -175px;
-  }
-*/

@@ -7,30 +7,25 @@
 }
 
 .reasons__header {
-  /* обводка */
-  outline: 2px solid green;
-  background: rgba(128, 255, 128, 0.25);
-
-  min-height: 148px; /* временно для сетки */
-
-  padding-top: 44px;
+  padding-top: 41px;
   padding-right: 20px;
-  padding-bottom: 29px;
+  padding-bottom: 26px;
   padding-left: 20px;
 
   text-transform: uppercase;
   text-align: center;  
+
+  background-color: white;
 }
 
 .reasons__title {
   margin: 0;
-  padding: 0;
+  padding: 0 5px 27px;
 
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: #000;
-
+  color: black;
 }
 
 .reasons__intro {
@@ -40,25 +35,20 @@
   font-size: 14px;
   line-height: 26px;
   color: #333;
-
 }
 
 .reasons__list {
-  /* обводка */
-  background: rgba(0, 0, 0, 0.2);
-  outline: 2px solid rgba(0, 0, 0, 0.9);
-  
-  min-height: 1841px; /* временно для сетки */
-
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  background-color: #eee;
 }
 
 .reasons__item-title {
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
 
   font-weight: bold;
   font-size: 18px;
@@ -75,36 +65,59 @@
 }
 
 .reasons__item {
-  display: block;
-  margin: 0;
-  padding: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 26px;
+  padding-bottom: 20px;
 
   text-align: center;
+  text-transform: uppercase;
 
-  img {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
+  border-bottom: 1px solid #d6d6d6;
+
+  &:first-child{
+    padding-top: 56px;
+  }
+  &:last-child{
+    padding-bottom: 19px;
+    border-bottom: none;
   }
 
   p {
     margin: 0;
-    padding: 0;
+    padding: 8px 15px;
 
     font-size: 14px;
     line-height: 21px;
+  }
+  
+  img {
+    height: 260px;
 
-    text-transform: uppercase;
+    display: block;
 
+    margin: 0 auto;
+    margin-top: 32px;
+    padding: 0;
   }
 
   &--featured {
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 39px;
+    padding-bottom: 0px;
+
     color: #fff;
 
+    border-bottom: none;
     background-color: $accent-color;
 
     h3 {
       color: #fff;
+    }
+
+    p {
+      padding: 8px 25px;
     }
   }
 
@@ -115,11 +128,23 @@
   .reasons__header {
     min-height: 99px; /* временно для сетки */
 
-    padding-top: 52px;
-    padding-bottom: 55px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .reasons__title {
+    padding: 0 50px 28px;
+
+    font-size: 21px;
   }
 
   .reasons__list {
     min-height: 1098px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .reasons__title {
+    padding: 0 300px 28px;
   }
 }

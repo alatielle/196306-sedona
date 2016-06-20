@@ -58,7 +58,7 @@
 }
 
 .main-nav__item a {
-  padding: 7px 0 7px;
+  padding: 7px 0 8px;
   margin-bottom: 1px;
 
   display: block;
@@ -82,13 +82,13 @@
 
 .main-nav__item a[href] {
   &:hover {
-    background-color: #669ec0;
+    background-color: $accent-color-hvr;
   }
 
   &:active {
     color: #94b9d2;
 
-    background-color: #5496bd;
+    background-color: $accent-color-down;
   }
 }
 
@@ -191,6 +191,18 @@
       color: #cacaca;
 
       background-color: transparent;
+    }
+  }
+
+  .main-nav__item--active a {
+    color: #766357;
+
+    &:hover {
+      color: #604e43;
+    }
+
+    &:active {
+      color: #dbd8d5;
     }
   }  
 }

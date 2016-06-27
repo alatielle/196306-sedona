@@ -153,20 +153,24 @@
     	      <button class="review__write  btn" type="submit">Отправить отзыв</button>
           </form>
 
-          <div class="review__popup  review__popup--fail  visually-hidden">
-            <h2 class="review__popup-message">Что-то пошло не так!</h2>
-            <p class="review__popup-message-details">
-              Проверьте поля, выделенные красным. Скорее всего вы забыли их заполнить
-            </p>
-            <button class="review__popup-close  btn">ОК</button>
+          <div class="review__popup-overlay">
+            <div class="review__popup  review__popup--fail  visually-hidden">
+              <h2 class="review__popup-message">Что-то пошло не так!</h2>
+              <p class="review__popup-message-details">
+                Проверьте поля, выделенные красным. Скорее всего вы забыли их заполнить
+              </p>
+              <button class="review__popup-close  btn">ОК</button>
+            </div>
           </div>
 
-          <div class="review__popup  review__popup--success  visually-hidden">
-            <h2 class="review__popup-message">Ваш отзыв отправлен</h2>
-            <p class="review__popup-message-details">
-              Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
-            </p>
-            <button class="review__popup-close  btn">Закрыть окно</button>
+          <div class="review__popup-overlay">
+            <div class="review__popup  review__popup--success">
+              <h2 class="review__popup-message">Ваш отзыв отправлен</h2>
+              <p class="review__popup-message-details">
+                Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.
+              </p>
+              <button class="review__popup-close  btn">Закрыть окно</button>
+            </div>
           </div>
 
         </section>
@@ -214,7 +218,7 @@
 
       });
     </script>
-<!--
+
     <script>
     var selectNotHidden = function(elements) {
       for (var i = 0; i < elements.length; i++) {
@@ -233,6 +237,6 @@
           popupWindow.classList.add('visually-hidden');
       });
     </script>
--->
+
   </body>
 </html>

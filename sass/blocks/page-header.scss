@@ -48,9 +48,7 @@
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5),
-       (min-resolution: 144dpi),
-       (min-resolution: 1.5dppx) {
+@media #{$retina} {
   .page-header__banner {
     background-image:
       url('../img/text-sedona.svg'),
@@ -95,9 +93,7 @@
     }
   }
 
-  @media (-webkit-min-device-pixel-ratio: 1.5),
-       (min-resolution: 144dpi),
-       (min-resolution: 1.5dppx) {
+@media #{$retina} {
     .page-header__banner {
       background-image:
         url('../img/text-sedona.svg'),
@@ -139,9 +135,7 @@
     }
   }
 
-  @media (-webkit-min-device-pixel-ratio: 1.5),
-         (min-resolution: 144dpi),
-         (min-resolution: 1.5dppx) {
+@media #{$retina} {
       .page-header__banner {
         background-image:
           url('../img/text-sedona.svg'),
@@ -156,6 +150,5 @@
         }   
       }
     }
-
 
 }

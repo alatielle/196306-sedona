@@ -2,31 +2,18 @@
         'utils/variables';
 
 .page-footer {
-  /* обводка */
-  outline: 2px solid green;
-  background: rgba(128, 255, 128, 0.25);
-
   @include container();
-  min-height: 182px; /**/
-
-  padding-top: 38px;
-  padding-bottom: 23px;
+  padding-top: 36px;
 
   text-transform: uppercase;
   text-align: center;
-}
 
-@media #{$tablet-widths} {
-  .page-footer {
-    min-height: 48px;
-
-    padding-top: 36px;
-    padding-bottom: 36px;
-  }
+  background-color: white;
 }
 
 .page-footer__title {
   margin: 0;
+  padding-bottom: 21px;
 
   font-weight: bold;
   font-size: 21px;
@@ -35,15 +22,87 @@
 }
 
 .page-footer__social {
-
+  margin: 0;
+  padding: 15px 20px;
 }
 
 .page-footer__copyright {
-  font-size: 14px;
-  line-height: 26px;
-  color: #000;
+
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 23px;
+
+
+  font-size: 0;
+}
+
+.page-footer__copyright span,
+.page-footer__copyright-link {
+
+  display: inline-block;
+  vertical-align: middle; 
 }
 
 .page-footer__copyright-link {
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
 
+  width: 40px;
+  height: 40px;
+
+  margin-left: 4px;
+
+  background-image: url('/img/htmlacademy-sprite.svg');
+  background-repeat: no-repeat;
+  background-size: 120px 40px;
+  background-position: 0% 0%;
+
+  &:hover {
+    background-position: 50% 0%;
+  }
+
+  &:active {
+    background-position: 100% 0%; 
+  }
+}
+
+.page-footer__copyright span {
+
+  font-size: 14px;
+  line-height: 26px;
+  color: #000;  
+}
+
+
+@media #{$tablet-widths} {
+  .page-footer {
+    min-height: 48px;
+
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__title, 
+  .page-footer__social,
+  .page-footer__copyright {
+    margin: 0;
+    padding: 0;   
+    width: 33%;
+  }
+}
+
+@media #{$desktop-widths} {
+  .page-footer__title, 
+  .page-footer__social,
+  .page-footer__copyright {
+    padding: 0 44px;
+  }
+  .page-footer__copyright {
+    text-align: right;
+  }
 }

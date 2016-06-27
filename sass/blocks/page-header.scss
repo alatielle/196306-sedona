@@ -1,6 +1,10 @@
 @import 'utils/mixins';
 @import 'utils/variables';
 
+.page-header {
+  @include container();
+}
+
 .page-header__logo {
   height: 83px;
 
@@ -20,26 +24,27 @@
   background-color: white;
 }
 
-.page-header {
-
-  @include container();
-
-}
-
 .page-header__banner {
-  width: 100%;
+    width: 100%;
+    height: 158px;
 
-  background-image: url('../img/bg-back-mobile@1x.jpg');
-  background-repeat: no-repeat;
+    background-image:
+      url('../img/text-sedona.svg'),
+      url('../img/bg-intro-triangle-mobile.svg'),
+      url('../img/bg-back-mobile@1x.jpg');
+    background-repeat: no-repeat;
+    background-size: 230px, auto, auto;
+    background-position: 45px 51px, 50% 100%, 50% 100%;
 
   &--welcome {
-    height: 445px;
-    background-position: 50% bottom;
-  }
+    height: 389px;
 
-  &--small {
-    height: 214px;
-    background-position: 50% -175px;
+    background-image:
+      url('../img/text-sedona-index.svg'),
+      url('../img/bg-intro-triangle-mobile.svg'),
+      url('../img/bg-back-mobile@1x.jpg');
+    background-size: 280px, auto, auto;
+    background-position: 50%, 50% 100%, 50% 100%;
   }
 }
 
@@ -51,15 +56,24 @@
   }
 
   .page-header__banner {
+background-color: rgba(0,0,155,0.3);
 
-//    background-image: url('../img/bg-back-desktop@1x.jpg');
-    background-image: none;
+    height: 290px;
+
+    background-image:
+      url('../img/text-sedona.svg'),
+      url('../img/bg-back-desktop@1x.jpg'); //DESKTOP
+    background-size: 456px, auto;
+    background-position: 156px 95px, 50% 100%;
 
     &--welcome {
-      height: 574px;
-    }
-    &--small {
-      height: 346px;
+      height: 518px;
+
+      background-image:
+        url('../img/text-sedona-index.svg'),
+        url('../img/bg-back-desktop@1x.jpg'); //DESKTOP
+      background-size: 460px, auto;
+      background-position: 50% 77px, 50% 100%;
     }
   }
 
@@ -67,8 +81,12 @@
 
 @media #{$desktop-widths} {
   .page-header__banner {
-    &--small {
-      height: 357px;
-    }    
+    height: 300px;
+    background-size: 460px, auto;
+    background-position: 50% 102px, 50% 100%;
+
+    &--welcome {
+      height: 518px;
+    }
   }
 }

@@ -7,61 +7,21 @@
 }
 
 .photo__header {
-  /* обводка */
-  outline: 2px solid green;
-  background: rgba(128, 255, 128, 0.25);
-
-  min-height: 117px; /* временно для сетки */
-
-  padding-top: 41px;
+  padding-top: 39px;
   padding-right: 22px;
-  padding-bottom: 31px;
+  padding-bottom: 27px;
   padding-left: 22px;
 
   text-transform: uppercase;
   text-align: center;
 
-}
-
-.photo__list {
-  /* обводка */
-  background: rgba(0, 0, 0, 0.2);
-  outline: 2px solid rgba(0, 0, 0, 0.9);
-
-  min-height: 1662px; /* временно для сетки */
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-@media #{$tablet-widths} {
-  .photo__header {
-    min-height: 103px;
-
-    padding-top: 72px;
-    padding-bottom: 73px;
-  }
-
-  .photo__list {
-    min-height: 1174px;
-  }
-}
-
-@media #{$desktop-widths} {
-  .photo__header {
-    padding-top: 109px;
-    padding-bottom: 75px;
-  }
-
-  .photo__list {
-    min-height: 667px;
-  }  
+  background-color: white;
 }
 
 .photo__title {
   margin: 0;
+
+  padding-bottom: 26px;
 
   font-weight: bold;
   font-size: 18px;
@@ -70,27 +30,50 @@
 }
 
 .photo__intro {
+  margin: 0;
+  padding: 0;
 
   font-size: 14px;
   line-height: 24px;
   color: #333;
 }
 
+.photo__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  background-color: white;
+}
+
 .photo__item {
+  box-sizing: border-box;
+  height: 415px;
+  padding: 22px 0;
+
   border-top: 1px solid $border-color;
 
   &:last-child {
    border-bottom: 1px solid $border-color;    
   }
-
 }
 
 .photo__image {
-  margin: 0;
-  padding: 20px;
+  line-height: 0;
 
-  width: 280px;
-  height: 280px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  img {
+      margin: 0;
+      padding: 0;
+      width: 280px;
+      height: 280px;
+  }
+}
+
+.photo__description-box {
+  padding: 15px 20px;
 }
 
 .photo__caption {
@@ -104,25 +87,23 @@
 
   text-transform: uppercase;
   text-align: left;
-
 }
 
 .photo__author {
   margin: 0;
-  padding: 0;
 
   font-size: 14px;
   line-height: 24px;
   color: #333;
 
   text-align: left;
-
-
 }
 
 .photo__likes {
   margin: 0;
-  padding: 0;
+  padding-top: 8px;
+
+  background: url('../img/icon-like-sprite.svg') no-repeat 0 0;
 
   font-weight: bold;
   font-size: 14px;
@@ -131,8 +112,135 @@
 
   text-transform: uppercase;
   text-align: left;
-
 }
 
 .photo__likes-count {
+  padding-left: 36px;
+}
+
+
+@media #{$tablet-widths} {
+  .photo__header {
+    padding: 74px 170px 69px;
+  }
+
+  .photo__title {
+    padding-bottom: 31px;
+    font-size: 30px;
+  }
+
+  .photo__image {
+    padding: 0;
+
+    img {
+      width: 325px;
+      height: 268px;
+    }
+  }
+
+  .photo__caption {
+    padding-right: 106px;
+  }
+
+  .photo__likes {
+    width: 69px;
+    float: right;
+
+    margin-top: -43px;
+    padding-left: 0;
+    padding-right: 0;
+
+    background-position: 4px 0;
+  }
+
+  .photo__list {
+    padding: 0 60px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .photo__item {
+    width: 50%;
+    height: 348px;
+
+    padding: 0;
+    border-top: none;
+    background-color: #f2f2f2;
+
+    &:last-child {
+     border-bottom: none;    
+    }
+
+    &:nth-child(odd) {
+      background-color: #eaeaea;
+    }
+  }
+
+  .photo__item:first-child {
+    width: 100%;
+    height: 480px;
+
+    background-color: #f2f2f2;
+
+    img {
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+}
+
+@media #{$desktop-widths} {
+  .photo__header {
+    padding: 112px 380px 70px;
+  }
+
+  .photo__title {
+    padding-bottom: 31px;
+    font-size: 30px;
+  }
+  
+  .photo__list {
+    padding: 0;
+  }
+
+ .photo__item {
+    width: 400px;
+    height: 268px;
+
+    position: relative;
+  }
+
+  .photo__item:first-child {
+    height: 400px;
+  }
+
+  .photo__image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .photo__description-box {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 80px;
+
+    position: absolute;
+    bottom: 0;
+
+    background-color: rgba(0,0,0,0.2);
+  }
+
+  .photo__caption,
+  .photo__author,
+  .photo__likes-count {
+    color: white;
+  }
+
+  .photo__likes {
+    background-position: 4px -32px;
+  }
+
 }

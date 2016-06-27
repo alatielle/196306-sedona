@@ -11,7 +11,7 @@
 
     	<header class="page-header">
     		<h1 class="visually-hidden">Седона</h1>
-        <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <nav class="main-nav  main-nav--opened  main-nav--nojs">
           <div class="main-nav__wrapper">
             <a href="#" class="main-nav__toggle">Закрыть меню</a>
             <ul class="main-nav__items">
@@ -30,12 +30,12 @@
             </ul>
           </div>
         </nav>
-        <div class="page-header__banner  page-header__banner--small">
-          <div class="page-header__logo">
-            <img src="img/logo-sedona-mobile.svg" width="103" height="83" alt="City of Sedona">
-          </div>
-          <div class="page-header__top-menu">
-          </div>
+        <div class="page-header__logo">
+          <img src="img/logo-sedona-mobile.svg" width="103" height="83" alt="City of Sedona">
+        </div>
+        <div class="page-header__top-menu">
+        </div>
+        <div class="page-header__banner">
         </div>
       </header>
 
@@ -50,49 +50,58 @@
             </p>
           </div>
           <ul class="photo__list">
+
           	<li class="photo__item">
-          		<figure class="photo__image">
-          			<img src="img/photo-1-mobile@1x.jpg" alt="Неродные просторы">
-    	      		<figcaption class="photo__caption">Неродные просторы</figcaption>
-          		</figure>
-          		<p class="photo__author">Автор фото: <span class="photo__author-name">Борис</span></p>
-          		<p class="photo__likes">
-          			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
-                <span class="photo__likes-count">1350</span>
-          		</p>
+              <div class="photo__image">
+          		  <img src="img/photo-1-mobile@1x.jpg" alt="Неродные просторы">
+              </div>
+              <div class="photo__description-box">
+                <p class="photo__caption">Неродные просторы</p>
+            		<p class="photo__author">Автор фото: <span class="photo__author-name">Борис</span></p>
+            		<p class="photo__likes">
+            			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
+                  <span class="photo__likes-count">1350</span>
+            		</p>
+              </div>
           	</li>
           	<li class="photo__item">
-          		<figure class="photo__image">
+          		<div class="photo__image">
           			<img src="img/photo-2-mobile@1x.jpg" alt="Местная растительность">
-          			<figcaption class="photo__caption">Местная растительность</figcaption>
-          		</figure>
-          		<p class="photo__author">Автор фото: <span class="photo__author-name">Сергей</span></p>
-          		<p class="photo__likes">
-          			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
-                <span class="photo__likes-count">143</span>
-          		</p>
+          		</div>
+              <div class="photo__description-box">
+                <p class="photo__caption">Местная растительность</p>
+            		<p class="photo__author">Автор фото: <span class="photo__author-name">Сергей</span></p>
+            		<p class="photo__likes">
+            			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
+                  <span class="photo__likes-count">143</span>
+            		</p>
+              </div>
           	</li>
-          	<li class="photo__item">
-          		<figure class="photo__image">
+          	<li class="photo__item">             
+          		<div class="photo__image">
           			<img src="img/photo-3-mobile@1x.jpg" alt="Дорога на север">
-          			<figcaption class="photo__caption">Дорога на север</figcaption>
-          		</figure>
-          		<p class="photo__author">Автор фото: <span class="photo__author-name">Петр</span></p>
-          		<p class="photo__likes">
-          			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
-                <span class="photo__likes-count">96</span>
-          		</p>
+          		</div>
+              <div class="photo__description-box">
+                <p class="photo__caption">Дорога на север</p>
+            		<p class="photo__author">Автор фото: <span class="photo__author-name">Петр</span></p>
+            		<p class="photo__likes">
+            			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
+                  <span class="photo__likes-count">96</span>
+            		</p>
+              </div>
           	</li>
           	<li class="photo__item">
-          		<figure class="photo__image">
+          		<div class="photo__image">
           			<img src="img/photo-4-mobile@1x.jpg" alt="Мост Дьявола">
-          			<figcaption class="photo__caption">Мост Дьявола</figcaption>
-          		</figure>
-          		<p class="photo__author">Автор фото: <span class="photo__author-name">Антон</span></p>
-          		<p class="photo__likes">
-          			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
-                <span class="photo__likes-count">254</span>
-          		</p>
+          		</div>
+              <div class="photo__description-box">
+                <p class="photo__caption">Мост Дьявола</p>
+            		<p class="photo__author">Автор фото: <span class="photo__author-name">Антон</span></p>
+            		<p class="photo__likes">
+            			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
+                  <span class="photo__likes-count">254</span>
+            		</p>
+              </div>
           	</li>
           </ul>
         </section>
@@ -103,19 +112,23 @@
           	<p>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           </div>
           <div class="video__wrapper">
-          	<video class="video__content" poster="img/video-mobile@1x.jpg">
+          	<video class="video__content" poster="pimg/video-mobile@1x.jpg">
       		    <source src="video.mp4" type="video/mp4">
          			<source src="video.ogv" type="video/ogg">
          			<source src="video.webm" type="video/webm">
           	</video>       
             <div class="video__controls">
               <div class="video__controls-range">
-                <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+                <input type="range" id="volume-bar" min="0" max="6" step="1" value="1">
               </div>
-              <div class="video__controls-other">
-                <button type="button" id="replay">Replay</button>
-                <button type="button" id="subtitles">Subtitles</button>
-                <button type="button" id="full-screen">Full-Screen</button>
+              <div class="video__controls-button">
+                <button type="button" class="replay-button" id="replay">Replay</button>
+              </div>
+              <div class="video__controls-button">
+                <button type="button" class="subtitles-button" id="subtitles">Subtitles</button>
+              </div>
+              <div class="video__controls-button">
+                <button type="button" class="fscreen-button" id="full-screen">Full-Screen</button>
               </div>
             </div>
           </div>
@@ -123,7 +136,7 @@
 
       </main>
 
-      <footer class="page-footer">
+      <footer class="page-footer">  
         <h2 class="page-footer__title">#visitsedona</h2>
         <p class="page-footer__social">
           <span class="social-links">
@@ -133,8 +146,10 @@
           </span>
         </p>
         <p class="page-footer__copyright">
-          Разработано
-          <a href="https://htmlacademy.ru" class="btn  page-footer__copyright-link" target="_blank">HTML Aсademy</a>
+          <span>Разработано</span>
+          <a href="https://htmlacademy.ru" class="page-footer__copyright-link" target="_blank">
+          HTML Aсademy
+          </a>
         </p>
       </footer>
 
@@ -154,7 +169,7 @@
           navMain.classList.remove('main-nav--opened');
         }
       });
-    </script>  
-      
+    </script>
+
   </body>
 </html>

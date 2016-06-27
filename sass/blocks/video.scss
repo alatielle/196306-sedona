@@ -4,18 +4,13 @@
 
 .video {
   @include container();
+  background-color: white;
 }
 
 .video__header {
-  /* обводка */
-  outline: 2px solid green;
-  background: rgba(128, 255, 128, 0.25);
-
-  min-height: 114px; /* временно для сетки */
-
-  padding-top: 36px;
+  padding-top: 20px;
   padding-right: 22px;
-  padding-bottom: 39px;
+  padding-bottom: 35px;
   padding-left: 22px;
 
   text-transform: uppercase;
@@ -23,88 +18,315 @@
 
   p {
     margin: 0;
-    padding: 0; 
+    padding-top: 10px; 
 
     font-size: 14px;
     line-height: 24px;
     color: #333;
   }
+}
 
+.video__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
 }
 
 .video__wrapper {
-  /* обводка */
-  background: rgba(0, 0, 0, 0.2);
-  outline: 2px solid rgba(0, 0, 0, 0.9);
-
   @include container();
+  box-sizing: border-box;
+  padding-bottom: 105px;
 
-  min-height: 267px; /* временно для сетки */
-
-  padding-bottom: 39px;
+  position: relative;
 }
+
+.video__content {
+  margin: 0;
+  padding: 0;
+
+  width: 320px;
+  height: 201px;
+
+  display: block;
+
+  background: #f2f2f2 url('../img/video-mobile@1x.jpg') no-repeat;
+}
+
+.video__controls {
+  width: 280px;
+  height: 66px;
+
+  line-height: 0;
+
+  position: absolute;
+  left: 20px;
+  top: 201px;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  background-color: #f2f2f2;
+}
+
+.video__controls-range {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45px;
+
+  margin-top: -45px;
+  
+  padding: 19px 22px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video__controls-button:nth-of-type(2) {
+  flex-grow: 1;
+  padding-left: 25px;
+}
+
+.video__controls-button:last-of-type {
+  padding-right: 24px;
+}
+
+.video__controls-button {
+  padding: 0 15px;
+}
+
+.video__controls-range {
+
+  input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+  /* THUMB */
+  /* Special styling for WebKit/Blink */
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 9px;
+    width: 9px;
+    border-radius: 9px;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -3px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  }
+
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    height: 9px;
+    width: 9px;
+    border-radius: 9px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    height: 9px;
+    width: 9px;
+    border-radius: 9px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+
+  /* TRACK */
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+  }
+
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: rgba(255,255,255,0.2);
+  }
+  input[type=range]::-ms-fill-upper {
+    background: rgba(255,255,255,0.2);
+  }
+}
+
+.replay-button,
+.subtitles-button,
+.fscreen-button {
+  height: 20px;
+
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('../img/icon-video-sprite.svg');
+
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+
+  cursor: pointer;
+}
+
+.replay-button {
+  width: 16px;
+
+  background-position: 0 0;
+  &:hover {
+    background-position: 0 -20px;
+  }
+  &:active {
+    background-position: 0 -40px;    
+  }
+}
+
+.subtitles-button {
+  width: 32px;
+
+  background-position: -32px 0;
+  &:hover {
+    background-position: -32px -20px;
+  }
+  &:active {
+    background-position: -32px -40px;    
+  }
+}
+
+.fscreen-button {
+  width: 20px;
+  background-position: -64px 0;
+  &:hover {
+    background-position: -64px -20px;
+  }
+  &:active {
+    background-position: -64px -40px;    
+  }
+}
+
 
 @media #{$tablet-widths} {
   .video__header {
-    min-height: 102px;
-
-    padding-top: 65px;
-    padding-bottom: 77px;
+    padding-top: 38px;
+    padding-right: 170px;
+    padding-bottom: 73px;
+    padding-left: 170px;
+    p {
+      padding-top: 7px; 
+    }
   }
   .video__wrapper {
-    min-height: 500px;
-    padding-bottom: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 39px;
+  }
+  .video__title {
+    font-size: 30px;
+  }
+  .video__content {
+    width: 648px;
+    height: 499px;
+
+    background-image: none; // FUTURE TABLET SIZE COVER
+  }
+  .video__controls {
+    width: 648px;
+    height: 93px;
+
+    justify-content: space-between;
+    align-items: center;
+
+    left: 60px;
+    top: 407px;
+
+    background-color: rgba(0,0,0,0.6);
+  }
+  .video__controls-button {
+    padding: 0;
+  }
+  .video__controls-button:nth-child(2) {
+    order: -1;
+    flex-grow: 0;
+    padding-left: 35px;
+  }
+
+  .video__controls-button:last-child {
+    padding-right: 40px;
+  }
+  .video__controls-range {
+    box-sizing: border-box;
+    width: 409px;
+    height: 20px;
+
+    padding: 6px 10px;
+    margin: 0;
+
+    background-color: transparent;
+  }
+  .replay-button {
+    background-position: 0 -60px;
+  }
+  .subtitles-button {
+    background-position: -32px -60px;
+  }
+  .fscreen-button {
+    background-position: -64px -60px;
   }
 }
 
 @media #{$desktop-widths} {
   .video__header {
-    padding-top: 69px;
-    padding-bottom: 75px;
+    padding-top: 45px;
+    padding-right: 380px;
+    padding-bottom: 71px;
+    padding-left: 380px;
+    p {
+      padding-top: 6px; 
+    }
   }
   .video__wrapper {
-    padding-bottom: 85px;
+    padding: 0 199px 85px;
   }  
+  .video__content {
+    width: 800px;
+    height: 500px;
+  }
+  .video__controls {
+    width: 800px;
+
+    left: 199px;
+  }
+  .video__controls-range {
+    width: 560px;
+  }
 }
 
-.video__title {
-
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 26px;
-  color: #000;
-
-}
-
-.video__content {
-  display: block;
-
-  margin: 0;
-  padding: 0;
-
-//  min-height: 201px;
-}
-
-.video__controls {
-  position: relative;
-
-  width: 280px;
-  margin: 0 auto;
-}
-
-.video__controls-range {
-  position: absolute;
-  top: -45px;
-  left: 0;
-
-  width: 100%;
-//  min-height: 45px;
-
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.video__controls-other {
-//  min-height: 66px;
-  background-color: #f2f2f2;
-}
 

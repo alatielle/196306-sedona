@@ -1,5 +1,5 @@
 .features {
-  background-color: #fff;
+  background-color: white;
 
   text-transform: uppercase;
   text-align: left;
@@ -7,14 +7,21 @@
 
 .features__list {
 	margin: 0;
-	padding: 0;
+
+  padding-left: 18px;
+  padding-right: 20px;
+  padding-top: 9px;
+  padding-bottom: 38px;
 
 	list-style: none;
 }
 
 .features__title {
   margin: 0;
-  padding: 0;
+
+  padding-top: 27px;
+  padding-bottom: 14px;
+  padding-left: 52px;
 
 	font-weight: bold;
 	font-size: 18px;
@@ -22,15 +29,105 @@
 	color: #000;
 }
 
+.features__item p {
+  margin: 0;
+  padding: 0;
+  padding-left: 52px;
+
+  font-size: 14px;
+  line-height: 21px;
+  color: #333;    
+}
+
 .features__item {
 
-	p {
-    margin: 0;
+  &--living {
+    background-image: url('/img/icon-house.svg');
+    background-repeat: no-repeat;
+    background-size: 40px 36px;
+    background-position: 3px 17px;
+
+  }
+  &--souvenirs {
+    background-image: url('/img/icon-gift.svg');
+    background-repeat: no-repeat;
+    background-size: 32px 38px;
+    background-position: 7px 16px;
+
+  }
+  &--food {
+    background-image: url('/img/icon-burger.svg');
+    background-repeat: no-repeat; 
+    background-size: 40px 35px;
+    background-position: 0px 23px;      
+  }
+
+}
+
+
+@media #{$tablet-widths} {
+  .features__list {
     padding: 0;
 
-		font-size: 14px;
-		line-height: 21px;
-		color: #333;	
-	
-	}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    text-align: center;
+  }
+
+  .features__title {
+    padding-left: 0;
+    padding-top: 20px;
+    padding-bottom: 21px;
+
+    font-size: 21px;
+  }
+
+  .features__item p {
+    padding: 0 45px;    
+  }
+
+  .features__item {
+    box-sizing: border-box;
+
+    width: 33%;
+    height: 330px;
+
+    padding-top: 139px;
+    padding-bottom: 20px;
+
+    &--living {
+      background-size: 76px 70px;
+      background-position: 50% 61px;
+    }
+    &--souvenirs {
+      order: 3;
+
+      background-size: 63px 74px;
+      background-position: 49% 57px;
+    }
+
+    &--food {
+      background-size: 76px 68px;
+      background-position: 50% 62px;
+    }
+    &--food  p {
+      padding: 0 50px;     
+    }
+    
+  }
+
+}
+
+@media #{$desktop-widths} {
+
+  .features__item p {
+      padding: 0 50px;
+    }
+
+  .features__item--souvenirs p {
+      padding: 0 100px;
+  }
+
 }

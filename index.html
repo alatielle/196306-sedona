@@ -2,77 +2,63 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-  	<header class="page-header">
-  		<h1 class="visually-hidden">Седона</h1>
+    <div class="wrapper">
 
-
-    	<nav class="main-nav  main-nav--opened">
-    		<div class="main-nav__wrapper">
-
-          <!--
-    			<a href="#" class="main-nav__toggle">Закрыть меню</a>
-        -->
-    			<ul class="main-nav__items">
-            <!--
-    				<li class="main-nav__item  main-nav__item--active">
-              <a>Главная</a>
-            </li>    				
-    				<li class="main-nav__item">
-              <a href="photo.html">Фото и видео</a>
-            </li>
-    				<li class="main-nav__item">
-              <a href="form.html">Форма отзыва</a>
-            </li>
-    				<li class="main-nav__item">
-              <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
-            </li>
-          -->
-    			</ul>
-          <!--
-    			<a class="main-nav__toggle">Открыть меню</a>
--->
-
-    		</div>
-    	</nav>
-
-
-      <div class="page-header__banner  page-header__banner--welcome">
-
-        <!--
+    	<header class="page-header">
+    		<h1 class="visually-hidden">Седона</h1>
+      	<nav class="main-nav  main-nav--opened  main-nav--nojs">
+      		<div class="main-nav__wrapper">
+      			<a href="#" class="main-nav__toggle">Закрыть меню</a>
+      			<ul class="main-nav__items">
+      				<li class="main-nav__item  main-nav__item--active">
+                <a>Главная</a>
+              </li>    				
+      				<li class="main-nav__item">
+                <a href="photo.html">Фото и видео</a>
+              </li>
+      				<li class="main-nav__item">
+                <a href="form.html">Форма отзыва</a>
+              </li>
+      				<li class="main-nav__item">
+                <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a>
+              </li>
+      			</ul>
+      		</div>
+      	</nav>
         <div class="page-header__logo">
           <img src="img/logo-sedona-mobile.svg" width="103" height="83" alt="City of Sedona">
+          </div>
+          <div class="page-header__top-menu">
         </div>
-        <div class="page-header__top-menu">
-        </div>
-         -->
+        <div class="page-header__banner  page-header__banner--welcome"></div>
+      </header>
+      
+      <main class="page-main">
 
-      </div>
+        <section class="reasons">
+        	<div class="reasons__header">
+        		<h2 class="reasons__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+    	    	<p class="reasons__intro">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
+          </div>
 
-    </header>
-    
-    <main class="page-main">
-      <section class="reasons">
+  	    	<ul class="reasons__list">   
 
-      	<div class="reasons__header">
-        <!--
-      		<h2 class="reasons__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
-  	    	<p class="reasons__intro">Рассмотрим 5 причин, по которым Седона круче чем Гранд Каньон!</p>
-        -->
-        </div>
+  	    		<li class="reasons__item  reasons__item--featured">
 
-	    	<ul class="reasons__list">
-        <!--
-	    		<li class="reasons__item  reasons__item--featured">
-	    			<h3 class="reasons__item-title">Настоящий городок</h3>
-	    			<p class="reasons__item-number">– №1 –</p>
-	    			<p>Седона не аттракцион для туристов, там течет своя жизнь</p>
-	    			<img src="img/photo-city@1x.jpg" alt="Вид на город">
-	    			<section class="features">
+              <div class="reasons__item-card">
+    	    			<h3 class="reasons__item-title">Настоящий городок</h3>
+    	    			<p class="reasons__item-number">– №1 –</p>
+    	    			<p>Седона не аттракцион для туристов, там течет своя жизнь</p>
+              </div>
+  	    			<img src="img/photo-city-mobile@1x.jpg" width="320" height="260" alt="Вид на город">
+
+            </li>
+
+  	    		<section class="features">
 		    			<ul class="features__list">
 		    				<li class="features__item  features__item--living">
 		    					<h4 class="features__title">Жилье</h4>
@@ -80,77 +66,112 @@
 		    				</li>
 		    				<li class="features__item  features__item--souvenirs">
 		    					<h4 class="features__title">Сувениры</h4>
-		    					<p>Не только китайского, но и местного производства!</p>
+		    					<p>Не только китайского, нo и местного производства!</p>
                 </li>
 		    				<li class="features__item  features__item--food">
 		    					<h4 class="features__title">Еда</h4>
-		    					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+		    					<p>Всегда заказывайте фирменный бургер,  вы не разочаруетесь!</p>
 		    				</li>
 		    			</ul>
-		    		</section>
-	     		<li class="reasons__item  reasons__item--featured">
-	    			<h3 class="reasons__item-title">Там есть Мост Дьявола</h3>
-	    			<p class="reasons__item-number">– №2 –</p>
-	    			<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-	    			<img src="img/photo-bridge@1x.jpg" alt="Мост дьявола">
-	     		</li>
-	     		<li class="reasons__item">
-	    			<h3 class="reasons__item-title">Небольшая площадь</h3>
-	    			<p class="reasons__item-number">– №3 –</p>
-	    			<p>Все достопримечательности находятся очень близко</p>
-	     		</li>
-	     		<li class="reasons__item">
-	    			<h3 class="reasons__item-title">Красивая дорога</h3>
-	    			<p class="reasons__item-number">– №4 –</p>
-	    			<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-	     		</li>
-	     		<li class="reasons__item">
-	    			<h3 class="reasons__item-title">Мало туристов</h3>
-	    			<p class="reasons__item-number">– №5 –</p>
-	    			<p>Большинство едет в Гранд Каньон и толпится там</p>
-	     		</li>
-        -->
-	     	</ul>
+  		    	</section>
 
-      </section>
+  	     		<li class="reasons__item  reasons__item--featured">
 
-      <section class="hotels">
-<!--
-        <div class="hotels__wrapper">
--->
-        	<div class="hotels__header">
-            <!--
-    	    	<h2 class="hotels__title">Заинтересовались?</h2>
-    	    	<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          -->
+              <div class="reasons__item-card">
+    	    			<h3 class="reasons__item-title">Там есть Мост Дьявола</h3>
+    	    			<p class="reasons__item-number">– №2 –</p>
+    	    			<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
+  	    			<img src="img/photo-bridge-mobile@1x.jpg" width="320" height="260" alt="Мост дьявола">
+
+  	     		</li>
+
+  	     		<li class="reasons__item">
+
+              <div class="reasons__item-card">
+    	    			<h3 class="reasons__item-title">Небольшая площадь</h3>
+    	    			<p class="reasons__item-number">– №3 –</p>
+    	    			<p>Все достопримеча&shy;тельности находятся очень близко</p>
+              </div>
+
+  	     		</li>
+
+  	     		<li class="reasons__item">
+
+              <div class="reasons__item-card">
+    	    			<h3 class="reasons__item-title">Красивая дорога</h3>
+    	    			<p class="reasons__item-number">– №4 –</p>
+    	    			<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
+
+  	     		</li>
+
+  	     		<li class="reasons__item">
+
+              <div class="reasons__item-card">
+    	    			<h3 class="reasons__item-title">Мало туристов</h3>
+    	    			<p class="reasons__item-number">– №5 –</p>
+    	    			<p>Большинство едет в Гранд Каньон и толпится там</p>
+              </div>
+
+  	     		</li>        
+  	     	</ul>
+        </section>
+
+        <section class="hotels">  
+          <div class="hotels__wrapper"> 
+          	<div class="hotels__header">
+      	    	<h2 class="hotels__title">Заинтересовались?</h2>
+      	    	<p>Укажите предполагаемые даты поездки и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            </div>
+      			<button type="button" class="hotels__find  btn">Найти гостиницу</button>
+      			<div class="hotels__map"></div>
           </div>
-<!--
-    			<button type="button" class="hotels__find  btn">Найти гостиницу</button>
-    			<div class="hotels__map"></div>
-        </div>
--->
-      </section>
+        </section>
 
+      </main>
 
-    </main>
+      <footer class="page-footer">  
+      	<h2 class="page-footer__title">#visitsedona</h2>
+      	<p class="page-footer__social">
+      		<span class="social-links">
+      			<a href="#" class="social-link  social-link--tw">Наш твиттер</a>
+      			<a href="#" class="social-link  social-link--fb">Наш фэйсбук</a>
+      			<a href="#" class="social-link  social-link--yt">Наш ютьюб</a>
+      		</span>
+      	</p>
+      	<p class="page-footer__copyright">
+      		<span>Разработано</span>
+          <a href="https://htmlacademy.ru" class="page-footer__copyright-link" target="_blank">
+      		HTML Aсademy
+          </a>
+      	</p>
+      </footer>
 
-    <footer class="page-footer">
-<!--
-    	<h2 class="page-footer__title">#visitsedona</h2>
-    	<p class="page-footer__social">
-    		<span class="social-links">
-    			<a href="#" class="social-link  social-link--tw">Наш твиттер</a>
-    			<a href="#" class="social-link  social-link--fb">Наш фэйсбук</a>
-    			<a href="#" class="social-link  social-link--yt">Наш ютьюб</a>
-    		</span>
-    	</p>
-    	<p class="page-footer__copyright">
-    		Разработано
-    		<a href="https://htmlacademy.ru" class="btn  page-footer__copyright-link" target="_blank">HTML Aсademy</a>
-    	</p>
-  -->
+    </div>
 
-    </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+    <script>
+      var btn = document.querySelector('.btn');
+      btn.addEventListener('click', function() {
+          btn.classList.add('in-progress');
+
+      });
+    </script>
 
   </body>
 </html>

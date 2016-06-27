@@ -2,77 +2,18 @@
 @import 'utils/variables';
 
 .page-header {
-  /* обводка */
-  outline: 2px solid green;
-  background: rgba(128, 255, 128, 0.25);
-
-  position: relative;
-
   @include container();
-  min-height: 668px; /* временно для сетки */
-
-  &--not-main {
-    min-height: 437px; /* временно для сетки */    
-  }
-
-}
-
-.page-header__banner {
-  /* обводка */
-  outline: 2px solid red;
-  background-color: rgba(255, 45, 82, 0.2);
-
-  width: 100%;
-
-  position: absolute;
-  bottom: 0;
-
-//  background-image: url('../img/bg-back-mobile@1x.jpg');
-//  background-repeat: no-repeat;
-
-  &--welcome {
-    height: 445px;
-//    background-position: 50% bottom;
-  }
-
-  &--small {
-    height: 214px;
-  }
-}
-
-@media #{$tablet-widths} {
-  
-  .page-header {
-    min-height: 56px; /* минимальная высота содержания */
-  }
-
-  .page-header__banner {
-    position: static;
-    margin-top: -56px;
-
-    &--welcome {
-      height: 574px;
-    }
-    &--small {
-      height: 346px;
-    }
-  }
-
-}
-
-@media #{$desktop-widths} {
-  .page-header__banner {
-    &--small {
-      height: 357px;
-    }    
-  }
 }
 
 .page-header__logo {
   height: 83px;
-  width: 103px;
 
-  margin: 0 auto;
+  text-align: center;
+}
+
+.page-header__logo img {
+  width: 103px; 
+  height: 83px;
 }
 
 .page-header__top-menu {
@@ -81,12 +22,71 @@
   margin: -83px auto 0;
 
   background-color: white;
+}
+
+.page-header__banner {
+    width: 100%;
+    height: 158px;
+
+    background-image:
+      url('../img/text-sedona.svg'),
+      url('../img/bg-intro-triangle-mobile.svg'),
+      url('../img/bg-back-mobile@1x.jpg');
+    background-repeat: no-repeat;
+    background-size: 230px, auto, auto;
+    background-position: 45px 51px, 50% 100%, 50% 100%;
+
+  &--welcome {
+    height: 389px;
+
+    background-image:
+      url('../img/text-sedona-index.svg'),
+      url('../img/bg-intro-triangle-mobile.svg'),
+      url('../img/bg-back-mobile@1x.jpg');
+    background-size: 280px, auto, auto;
+    background-position: 50%, 50% 100%, 50% 100%;
+  }
+}
+
+
+@media #{$tablet-widths} {
+  
+  .page-header {
+    min-height: 56px; /* минимальная высота содержания */
+  }
+
+  .page-header__banner {
+background-color: rgba(0,0,155,0.3);
+
+    height: 290px;
+
+    background-image:
+      url('../img/text-sedona.svg'),
+      url('../img/bg-back-desktop@1x.jpg'); //DESKTOP
+    background-size: 456px, auto;
+    background-position: 156px 95px, 50% 100%;
+
+    &--welcome {
+      height: 518px;
+
+      background-image:
+        url('../img/text-sedona-index.svg'),
+        url('../img/bg-back-desktop@1x.jpg'); //DESKTOP
+      background-size: 460px, auto;
+      background-position: 50% 77px, 50% 100%;
+    }
+  }
 
 }
 
-/*
-  &--small {
-    height: 214px;
-    background-position: 50% -175px;
+@media #{$desktop-widths} {
+  .page-header__banner {
+    height: 300px;
+    background-size: 460px, auto;
+    background-position: 50% 102px, 50% 100%;
+
+    &--welcome {
+      height: 518px;
+    }
   }
-*/
+}

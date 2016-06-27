@@ -1,12 +1,16 @@
 $bg-color: #f2f2f2;
 $accent-color: #81b3d2; //blue
-$error-color: #ff5c5c;
+$accent-color-hvr: #669ec0;
+$accent-color-down: #5496bd;
+
 $input-bg-color: #f2f2f2;
 $border-color: #e5e5e5;
+$error-color: #ff5c5c;
 
 $width-small: 320px;
 $width-medium: 768px;
 $width-large: 1200px;
 
+$mobile-widths-only: "(max-width: 767px)";
 $tablet-widths: "(min-width: 768px)";
 $desktop-widths: "(min-width: 1200px)";

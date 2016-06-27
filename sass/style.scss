@@ -1,4 +1,11 @@
 @import
+  'utils/normalize',
+  'utils/outlines',
+  'utils/mixins',
+  'utils/variables',
+  'utils/scaffolding';
+
+@import
   'blocks/page-header',
   'blocks/main-nav',
   'blocks/reasons',
@@ -13,9 +20,3 @@
   'blocks/btn',
   'blocks/checkbox-indicator',
   'blocks/radio-indicator';
-
-@import
-'utils/outlines',
-  'utils/mixins',
-  'utils/variables',
-  'utils/scaffolding';

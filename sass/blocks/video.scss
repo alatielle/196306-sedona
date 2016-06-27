@@ -255,7 +255,7 @@
     width: 648px;
     height: 499px;
 
-    background-image: none; // FUTURE TABLET SIZE COVER
+    background-image: url('../img/video-tablet@1x.jpg');
   }
   .video__controls {
     width: 648px;
@@ -318,6 +318,8 @@
   .video__content {
     width: 800px;
     height: 500px;
+
+    background-image: url('../img/video-desktop@1x.jpg');
   }
   .video__controls {
     width: 800px;

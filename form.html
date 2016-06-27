@@ -153,8 +153,8 @@
     	      <button class="review__write  btn" type="submit">Отправить отзыв</button>
           </form>
 
-          <div class="review__popup-overlay">
-            <div class="review__popup  review__popup--fail  visually-hidden">
+          <div class="review__popup-overlay  visually-hidden">
+            <div class="review__popup  review__popup--fail">
               <h2 class="review__popup-message">Что-то пошло не так!</h2>
               <p class="review__popup-message-details">
                 Проверьте поля, выделенные красным. Скорее всего вы забыли их заполнить
@@ -227,7 +227,7 @@
         }
       }
     };
-      var popupWindows = document.querySelectorAll('.review__popup');
+      var popupWindows = document.querySelectorAll('.review__popup-overlay');
       //var btnsClose = document.querySelectorAll('.review__popup-close');
       
       var popupWindow = selectNotHidden(popupWindows);

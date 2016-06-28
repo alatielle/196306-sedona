@@ -141,7 +141,7 @@
   &--introduction {
 
     .review__field {
-      @include flexbox();
+      display: flex;
       align-items: center;
 
       margin-bottom: 20px;
@@ -348,7 +348,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   }
 
   .review__form {
-    @include flexbox();
+    display: flex;
     flex-wrap: wrap;
 
     padding: 0 60px 61px;
@@ -383,7 +383,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
       .review__field {
         padding: 25px 0 0 0;
-        @include flexbox();
+        display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
 
@@ -433,7 +433,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       margin-bottom: 42px;
 
       .review__wrapper {
-        @include flexbox();
+        display: flex;
         flex-wrap: wrap;
       }
       .review__checkbox {
@@ -441,22 +441,22 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
         margin-top: 10px;
       }
       .review__checkbox:nth-child(2) {
-        @include order(3);
+        order: 3;
       }
       .review__checkbox:nth-child(3) {
-        @include order(2);
+        order: 2;
       }
       .review__checkbox:nth-child(4) {
-        @include order(4);
+        order: 4;
       }
       .review__legend {
-        margin-bottom: 0px;
+        margin-bottom: 0;
       }
 
     }
 
     &--emotions {
-      @include order(5);
+      order: 5;
       width: 100%;
 
       margin: 0;
@@ -471,8 +471,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   }
 
   .review__write {
-    @include order(10);
-
+    order: 10;
     width: 458px;
     margin: 0;
   }
@@ -532,8 +531,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     text-align: center;
     text-transform: uppercase;
 
-    -webkit-box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
-    -moz-box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
     box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
 
     &--fail {
@@ -597,7 +594,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
 
   .review__required-fields {
-    @include order(11);
+    order: 11;
     flex-grow: 1;
     align-self: center;
 
@@ -616,7 +613,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   .review__title {
     font-size: 30px;
   }
-
 }
 
 @media #{$desktop-widths} {
@@ -624,6 +620,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   .review__header {
     padding-top: 112px;
     padding-bottom: 43px;
+
     p {
       padding: 31px 360px 0;
     }
@@ -635,7 +632,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
   .review__fieldset {
     margin-top: 0;
-//    margin-bottom: 68px;
 
     &--introduction {
       padding-left: 79px;
@@ -649,7 +645,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       padding-top: 15px;
 
       .review__wrapper {
-        @include flexbox();
+        display: flex;
         align-items: flex-end;
         justify-content: space-between;
 
@@ -681,8 +677,9 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
         }
 
         .review__error {
-          @include order(-1);
+          order: -1;
           width: 100%;
+          
           p {
             padding-left: 106px;
             float: none;

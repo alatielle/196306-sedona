@@ -69,7 +69,7 @@
   .features__list {
     padding: 0;
 
-    @include flexbox();
+    display: flex;
     align-items: center;
     justify-content: space-between;
     
@@ -101,9 +101,9 @@
       background-size: 76px 70px;
       background-position: 50% 61px;
     }
-    &--souvenirs {
-      @include order(3);
 
+    &--souvenirs {
+      order: 3;
       background-size: 63px 74px;
       background-position: 49% 57px;
     }
@@ -112,6 +112,7 @@
       background-size: 76px 68px;
       background-position: 50% 62px;
     }
+    
     &--food  p {
       padding: 0 50px;     
     }

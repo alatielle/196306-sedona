@@ -129,7 +129,6 @@
 }
 
 
-
 @media #{$tablet-widths} {
 
   .reasons__header {
@@ -145,7 +144,7 @@
   }
 
   .reasons__list {
-    @include flexbox();
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -174,7 +173,7 @@
     margin: 0;
     padding: 0;
 
-    @include flexbox();
+    display: flex;
 
     .reasons__item-card {
       width: 33%;
@@ -191,7 +190,7 @@
     }
 
     &:nth-of-type(even) .reasons__item-picture {
-      @include order(-1);
+      order: -1;
     }
   }
 
@@ -204,8 +203,8 @@
     padding: 45px 50px 2px;
     font-size: 21px;
   }
-
 }
+
 
 @media #{$desktop-widths} {
   .reasons__title {

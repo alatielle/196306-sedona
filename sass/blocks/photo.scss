@@ -120,6 +120,7 @@
 
 
 @media #{$tablet-widths} {
+
   .photo__header {
     padding: 74px 170px 69px;
   }
@@ -156,7 +157,7 @@
   .photo__list {
     padding: 0 60px;
 
-    @include flexbox();
+    display: flex;
     flex-wrap: wrap;
   }
 
@@ -216,10 +217,8 @@
     height: 400px;
   }
 
-  .photo__image {
-    img {
+  .photo__image img {
       width: 100%;
-    }
   }
 
   .photo__description-box {

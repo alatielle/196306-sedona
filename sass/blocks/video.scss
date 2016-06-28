@@ -63,7 +63,7 @@
   left: 20px;
   top: 201px;
 
-  display: flex;
+  @include flexbox();
   flex-wrap: wrap;
   align-items: flex-start;
 
@@ -273,7 +273,7 @@
     padding: 0;
   }
   .video__controls-button:nth-child(2) {
-    order: -1;
+    @include order(-1);
     flex-grow: 0;
     padding-left: 35px;
   }

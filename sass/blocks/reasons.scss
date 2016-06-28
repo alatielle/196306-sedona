@@ -145,7 +145,7 @@
   }
 
   .reasons__list {
-    display: flex;
+    @include flexbox();
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -174,7 +174,7 @@
     margin: 0;
     padding: 0;
 
-    display: flex;
+    @include flexbox();
 
     .reasons__item-card {
       width: 33%;
@@ -191,7 +191,7 @@
     }
 
     &:nth-of-type(even) .reasons__item-picture {
-      order: -1;
+      @include order(-1);
     }
   }
 

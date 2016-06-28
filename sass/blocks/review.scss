@@ -141,7 +141,7 @@
   &--introduction {
 
     .review__field {
-      display: flex;
+      @include flexbox();
       align-items: center;
 
       margin-bottom: 20px;
@@ -348,7 +348,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   }
 
   .review__form {
-    display: flex;
+    @include flexbox();
     flex-wrap: wrap;
 
     padding: 0 60px 61px;
@@ -383,7 +383,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
       .review__field {
         padding: 25px 0 0 0;
-        display: flex;
+        @include flexbox();
         flex-wrap: wrap;
         justify-content: space-between;
 
@@ -433,7 +433,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       margin-bottom: 42px;
 
       .review__wrapper {
-        display: flex;
+        @include flexbox();
         flex-wrap: wrap;
       }
       .review__checkbox {
@@ -441,13 +441,13 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
         margin-top: 10px;
       }
       .review__checkbox:nth-child(2) {
-        order: 3;
+        @include order(3);
       }
       .review__checkbox:nth-child(3) {
-        order: 2;
+        @include order(2);
       }
       .review__checkbox:nth-child(4) {
-        order: 4;
+        @include order(4);
       }
       .review__legend {
         margin-bottom: 0px;
@@ -456,7 +456,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     }
 
     &--emotions {
-      order: 5;
+      @include order(5);
       width: 100%;
 
       margin: 0;
@@ -471,7 +471,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   }
 
   .review__write {
-    order: 10;
+    @include order(10);
 
     width: 458px;
     margin: 0;
@@ -532,6 +532,8 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     text-align: center;
     text-transform: uppercase;
 
+    -webkit-box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
+    -moz-box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
     box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
 
     &--fail {
@@ -595,7 +597,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
 
   .review__required-fields {
-    order: 11;
+    @include order(11);
     flex-grow: 1;
     align-self: center;
 
@@ -647,7 +649,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       padding-top: 15px;
 
       .review__wrapper {
-        display: flex;
+        @include flexbox();
         align-items: flex-end;
         justify-content: space-between;
 
@@ -679,7 +681,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
         }
 
         .review__error {
-          order: -1;
+          @include order(-1);
           width: 100%;
           p {
             padding-left: 106px;

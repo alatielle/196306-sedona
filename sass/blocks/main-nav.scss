@@ -144,7 +144,7 @@
   }
 
   .main-nav__items {
-    display: flex;
+    @include flexbox();
 
     background-color: transparent;
   }
@@ -156,11 +156,12 @@
   .main-nav__items::after {
     content: "";
     width: 20%;
-    order: 3;
+
+    @include order(3);
   }
 
   .main-nav__item:nth-child(3) {
-    order: 4;
+    @include order(4);
   }
 
   .main-nav__item:first-child {
@@ -168,7 +169,7 @@
   }
 
   .main-nav__item:last-child {
-    order: 5;
+    @include order(5);
 
     margin-bottom: 0;
 
@@ -213,8 +214,4 @@
       color: #dbd8d5;
     }
   }  
-}
-
-@media #{$desktop-widths} {
-
 }

@@ -84,6 +84,7 @@
   &--textarea {
     box-sizing: border-box;
     width: 280px;
+    max-width: 280px;
     height: 160px;
 
     padding: 22px;
@@ -460,11 +461,13 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
       margin: 0;
       padding: 60px 0 49px;
-
-      .review__input--textarea {
-        width: 100%;
-      }
     }
+  }
+
+  .review__input--textarea {
+    width: 648px;
+    min-width: 648px;
+    max-width: 648px;
   }
 
   .review__write {
@@ -611,6 +614,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   .review__title {
     font-size: 30px;
   }
+
 }
 
 @media #{$desktop-widths} {
@@ -703,7 +707,13 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     }
   }
 
+  .review__input--textarea {
+    width: 960px;
+    min-width: 960px;
+    max-width: 960px;
+  }
+
   .review__write {
-    width: 50%;
+    width: 480px;
   }
 }

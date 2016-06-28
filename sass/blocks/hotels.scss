@@ -61,10 +61,10 @@
     padding-bottom: 42px;
     padding-left: 50px;
     padding-right: 50px;
+  }
 
-    p {
+  .hotels__header p {
       padding: 31px 130px 0;
-    }
   }
 
   .hotels__title {
@@ -94,9 +94,10 @@
 
   .hotels__header {
     padding-bottom: 47px;
-    p {
-      padding: 31px 350px 0;
-    }
+  }
+
+  .hotels__header p {
+    padding: 31px 350px 0;
   }
 
   .hotels__map {

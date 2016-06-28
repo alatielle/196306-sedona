@@ -290,26 +290,28 @@ input[type="radio"]:checked ~ .review__radio-indicator {
   height: 56px;
   background-color: #f2f2f2;
   border-radius: 5px;
+  text-align: center;
 
   &:hover {
     background-color: #e5e5e5;
   }
   &:active {
     background-color: #d5d5d5;
+  }
+  svg {
+    width: 24px;
+    height: 16px;
+    margin-top: 20px;
+    fill: none;
   }
 }
 
 input[type="checkbox"]:checked ~ .review__checkbox-indicator {
-  background-color: #f2f2f2;
-  background-image: url('../img/icon-tick-sprite.svg');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  &:hover {
-    background-color: #e5e5e5;
+  svg {
+    fill: #333;
   }
-  &:active {
-    background-color: #d5d5d5;
-    background-position: 100% 0;
+  &:active svg {
+    opacity: 0.3;
   }
 }
 
@@ -679,7 +681,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
         .review__error {
           order: -1;
           width: 100%;
-          
+
           p {
             padding-left: 106px;
             float: none;

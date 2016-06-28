@@ -68,7 +68,7 @@
                     srcset="img/photo-1-tablet@2x.jpg 2x,
                             img/photo-1-tablet@1x.jpg 1x">
                   <!-- mobile -->
-          		    <img src="img/photo-1-mobile@1x.jpg"
+                  <img src="img/photo-1-mobile@1x.jpg"
                        srcset="img/photo-1-mobile@2x.jpg 2x" alt="Неродные просторы">
                 </picture>
               </div>
@@ -76,7 +76,10 @@
                 <p class="photo__caption">Неродные просторы</p>
             		<p class="photo__author">Автор фото: <span class="photo__author-name">Борис</span></p>
             		<p class="photo__likes">
-            			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
+                  <span class="photo__likes-icon">
+                    <svg><use xlink:href="/img/symbols.svg#icon-like"></use></svg>
+                  </span>
+                  <span class="photo__likes-caption  visually-hidden">Понравилось </span>
                   <span class="photo__likes-count">1350</span>
             		</p>
               </div>
@@ -103,7 +106,10 @@
                 <p class="photo__caption">Местная растительность</p>
             		<p class="photo__author">Автор фото: <span class="photo__author-name">Сергей</span></p>
             		<p class="photo__likes">
-            			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
+                  <span class="photo__likes-icon">
+                    <svg><use xlink:href="/img/symbols.svg#icon-like"></use></svg>
+                  </span>
+                  <span class="photo__likes-caption  visually-hidden">Понравилось </span>
                   <span class="photo__likes-count">143</span>
             		</p>
               </div>
@@ -130,7 +136,10 @@
                 <p class="photo__caption">Дорога на север</p>
             		<p class="photo__author">Автор фото: <span class="photo__author-name">Петр</span></p>
             		<p class="photo__likes">
-            			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
+                  <span class="photo__likes-icon">
+                    <svg><use xlink:href="/img/symbols.svg#icon-like"></use></svg>
+                  </span>
+                  <span class="photo__likes-caption  visually-hidden">Понравилось </span>
                   <span class="photo__likes-count">96</span>
             		</p>
               </div>
@@ -157,6 +166,9 @@
                 <p class="photo__caption">Мост Дьявола</p>
             		<p class="photo__author">Автор фото: <span class="photo__author-name">Антон</span></p>
             		<p class="photo__likes">
+                  <span class="photo__likes-icon">
+                    <svg><use xlink:href="/img/symbols.svg#icon-like"></use></svg>
+                  </span>
             			<span class="photo__likes-caption  visually-hidden">Понравилось </span>
                   <span class="photo__likes-count">254</span>
             		</p>
@@ -181,13 +193,22 @@
                 <input type="range" id="volume-bar" min="0" max="6" step="1" value="1">
               </div>
               <div class="video__controls-button">
-                <button type="button" class="replay-button" id="replay">Replay</button>
+                <button type="button" class="replay-button" id="replay">
+                  <svg><use xlink:href="/img/symbols.svg#icon-video-replay"></use></svg>
+                  Replay
+                </button>
               </div>
               <div class="video__controls-button">
-                <button type="button" class="subtitles-button" id="subtitles">Subtitles</button>
+                <button type="button" class="subtitles-button" id="subtitles">
+                  <svg><use xlink:href="/img/symbols.svg#icon-video-subtitles"></use></svg>
+                  Subtitles
+                </button>
               </div>
               <div class="video__controls-button">
-                <button type="button" class="fscreen-button" id="full-screen">Full-Screen</button>
+                <button type="button" class="fscreen-button" id="full-screen">
+                  <svg><use xlink:href="/img/symbols.svg#icon-video-fullscreen"></use></svg>
+                  Full-Screen
+                </button>
               </div>
             </div>
           </div>
@@ -199,15 +220,25 @@
         <h2 class="page-footer__title">#visitsedona</h2>
         <p class="page-footer__social">
           <span class="social-links">
-            <a href="#" class="social-link  social-link--tw">Наш твиттер</a>
-            <a href="#" class="social-link  social-link--fb">Наш фэйсбук</a>
-            <a href="#" class="social-link  social-link--yt">Наш ютьюб</a>
+            <a href="#" class="social-link  social-link--tw">
+              <svg><use xlink:href="/img/symbols.svg#icon-twitter"></use></svg>
+              Наш твиттер
+            </a>
+            <a href="#" class="social-link  social-link--fb">
+              <svg><use xlink:href="/img/symbols.svg#icon-facebook"></use></svg>
+              Наш фэйсбук
+            </a>
+            <a href="#" class="social-link  social-link--yt">
+              <svg><use xlink:href="/img/symbols.svg#icon-youtube"></use></svg>
+              Наш ютьюб
+            </a>
           </span>
         </p>
         <p class="page-footer__copyright">
           <span>Разработано</span>
           <a href="https://htmlacademy.ru" class="page-footer__copyright-link" target="_blank">
-          HTML Aсademy
+            <svg><use xlink:href="/img/symbols.svg#htmlacademy"></use></svg>
+            HTML Aсademy
           </a>
         </p>
       </footer>

@@ -27,18 +27,15 @@
 }
 
 .page-footer__copyright {
-
   margin: 0;
   padding-top: 20px;
   padding-bottom: 23px;
-
 
   font-size: 0;
 }
 
 .page-footer__copyright span,
 .page-footer__copyright-link {
-
   display: inline-block;
   vertical-align: middle; 
 }
@@ -48,27 +45,26 @@
   text-shadow: none;
   color: transparent;
 
-  width: 40px;
   height: 40px;
 
   margin-left: 4px;
+}
 
-  background-image: url('../img/htmlacademy-sprite.svg');
-  background-repeat: no-repeat;
-  background-size: 120px 40px;
-  background-position: 0% 0%;
+.page-footer__copyright-link svg {
+   fill: #000;
+   width: 40px;
+   height: 40px;
+}
 
-  &:hover {
-    background-position: 50% 0%;
-  }
+.page-footer__copyright-link:hover svg {
+  fill: $accent-color;
+}
 
-  &:active {
-    background-position: 100% 0%; 
-  }
+.page-footer__copyright-link:active svg {
+  fill: #b2b2b2;
 }
 
 .page-footer__copyright span {
-
   font-size: 14px;
   line-height: 26px;
   color: #000;  

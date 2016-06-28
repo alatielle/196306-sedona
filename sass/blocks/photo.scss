@@ -147,23 +147,24 @@
     }
   }
 
-  .photo__caption {
-    padding-right: 106px;
+  .photo__description-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .photo__info {
+    flex-grow: 1;
   }
 
   .photo__likes {
-    width: 69px;
-    float: right;
-
-    margin-top: -45px;
+    width: 65px;
+    padding-top: 4px;
     padding-left: 0;
     padding-right: 0;
-
   }
 
   .photo__likes-icon {
     margin-right: 6px;
-    padding-left: 4px;
   }
 
   .photo__list {
@@ -241,10 +242,6 @@
     bottom: 0;
 
     background-color: rgba(0,0,0,0.3);
-  }
-
-  .photo__likes {
-    margin-top: -43px;
   }
 
   .photo__caption,

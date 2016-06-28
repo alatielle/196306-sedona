@@ -53,6 +53,17 @@ gulp.task("symbols", function() {
     .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("symbols-clean", function() {
+  return  del("build/img/icons/**");
+});
+
+gulp.task("pages", function() {
+  gulp.src("*.html")
+    .pipe(plumber())
+    .pipe(gulp.dest("build"))
+    .pipe(server.reload({stream: true}));
+});
+
 gulp.task("serve", function() {
   server.init({
     server: "build",
@@ -62,7 +73,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("*.html", ["pages"]);
 });
 
 gulp.task("build", function(fn) {
@@ -72,6 +83,7 @@ gulp.task("build", function(fn) {
     "style",
     "images",
     "symbols",
+    "symbols-clean",
     fn
   );
 });

@@ -42,39 +42,23 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: #000; 
+  color: #000;
 
-  background-color: #f2f2f2; 
+  background-color: #f2f2f2;
   border: none;
   opacity: 1;
 
   &::placeholder {
     opacity: 1;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    color: #000;  
   }
   &::-webkit-input-placeholder {
     opacity: 1;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    color: #000;
   }
   &:-moz-placeholder {
     opacity: 1;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    color: #000;  
   }
   &:-ms-input-placeholder {
     opacity: 1;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    color: #000;
   }
 
   &:hover {
@@ -173,7 +157,7 @@
 
   .review__error p {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 
     font-size: 14px;
     line-height: 26px;
@@ -232,11 +216,11 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: #000; 
+  color: #000;
 
   input {
     display: none;
-  } 
+  }
 }
 
 .review__radio {
@@ -264,7 +248,7 @@
 
   &:active {
     border-color: #d5d5d5;
-    background-color: #d5d5d5;    
+    background-color: #d5d5d5;
   }
 }
 
@@ -272,8 +256,8 @@ input[type="radio"]:checked ~ .review__radio-indicator {
   background-color: #333;
 
   &:active {
-    background-color: #a4a4a4;    
-  }  
+    background-color: #a4a4a4;
+  }
 }
 
 .review__checkbox-indicator {
@@ -316,7 +300,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 }
 
 .review__write {
-  margin: 0 auto; 
+  margin: 0 auto;
   width: 280px;
 }
 
@@ -419,7 +403,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
   .review__fieldset--impression .review__radio {
     margin-bottom: 22px;
-        
+
     &:last-child{
       margin-bottom: 0px;
     }
@@ -559,7 +543,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       bottom: 49px;
       left: 64px;
     }
-  } 
+  }
 
   .review__popup--success {
     width: 640px;
@@ -606,7 +590,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       color: #333;
 
       text-align: right;
-      text-transform: uppercase;      
+      text-transform: uppercase;
     }
   }
 
@@ -694,7 +678,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     padding-top: 45px;
     padding-left: 0;
     margin-bottom: 64px;
-      
+
     .review__wrapper {
       flex-wrap: nowrap;
       justify-content: space-between;

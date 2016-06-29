@@ -46,7 +46,7 @@
 
   background-color: #f2f2f2;
   border: none;
-  opacity: 1;
+//  opacity: 1;
 
   &::placeholder {
     opacity: 1;
@@ -174,16 +174,15 @@
     background-repeat: no-repeat;
     background-position: right 0 top 0;
     background-origin: border-box;
-  }
 
-  .review__input--tel {
-    background-image: url("../img/icon-phone.svg");
-  }
+    &--tel {
+      background-image: url("../img/icon-phone.svg");
+    }
 
-  .review__input--email {
-    background-image: url("../img/icon-mail.svg");
+    &--email {
+      background-image: url("../img/icon-mail.svg");
+    }
   }
-
 }
 
 .review__fieldset--impression {
@@ -418,7 +417,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     margin-bottom: 42px;
 
     .review__legend {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
   }
 
@@ -673,17 +672,16 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     }
   }
 
-
   .review__fieldset--sights {
     padding-top: 45px;
     padding-left: 0;
     margin-bottom: 64px;
+  }
 
-    .review__wrapper {
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
+  .review__fieldset--sights .review__wrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
 
     .review__checkbox {
       margin: 0;

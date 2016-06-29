@@ -147,7 +147,7 @@
 
   .reasons__item {
     width: 33%;
-    height: 256px;
+    min-height: 256px;
 
     margin: 0;
     padding: 0;
@@ -184,10 +184,10 @@
       height: 256px;
       margin: 0;
     }
+  }
 
-    &:nth-of-type(even) .reasons__item-picture {
-      order: -1;
-    }
+  .reasons__item--featured:nth-of-type(2n+3) .reasons__item-picture {
+    order: -1;
   }
 
   .reasons__item-card p {
@@ -199,6 +199,8 @@
     padding: 45px 50px 2px;
     font-size: 21px;
   }
+
+
 }
 
 

@@ -1,7 +1,3 @@
-@import
-  'utils/mixins',
-  'utils/variables';
-
 .reasons {
   @include container();
 }
@@ -87,7 +83,7 @@
 
   &:first-child{
     padding-top: 78px;
-    background-image: url('../img/bg-triangle.svg');
+    background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: top;
   }
@@ -129,7 +125,6 @@
 }
 
 
-
 @media #{$tablet-widths} {
 
   .reasons__header {
@@ -152,7 +147,7 @@
 
   .reasons__item {
     width: 33%;
-    height: 256px;
+    min-height: 256px;
 
     margin: 0;
     padding: 0;
@@ -189,10 +184,10 @@
       height: 256px;
       margin: 0;
     }
+  }
 
-    &:nth-of-type(even) .reasons__item-picture {
-      order: -1;
-    }
+  .reasons__item--featured:nth-of-type(2n+3) .reasons__item-picture {
+    order: -1;
   }
 
   .reasons__item-card p {
@@ -205,7 +200,9 @@
     font-size: 21px;
   }
 
+
 }
+
 
 @media #{$desktop-widths} {
   .reasons__title {

@@ -1,5 +1,3 @@
-@import 'utils/variables';
-
 .social-link {
 	width: 46px;
 	height: 48px;
@@ -10,38 +8,37 @@
 	vertical-align: middle;
 
 	background-color: $accent-color;
-	background-image: url('../img/social-sprite.svg');
-	background-repeat: no-repeat;
 
-    &:last-child {
-    	margin-right: 0;
-    }
-
-    &:hover {
+  &:last-child {
+   	margin-right: 0;
+  }
+  &:hover {
 		background-color: $accent-color-hvr;    	
-    }
+  }
+  &:active {
+   	background-color: $accent-color-down;
+  }
+  svg {
+		fill: white;
+  }
+  &:active svg {
+  	opacity: 0.3;
+  }
 
-    &:active {
-    	background-color: $accent-color-down;
-    }
-
-	&--tw {
-		background-position: 0% 0%;
-		&:hover {
-			background-position: 0% 100%;
-		}
+	&--tw svg {
+		width: 18px;
+		height: 15px;
+		margin-top: 17px;	
 	}
-	&--fb {
-		background-position: 50% 0%;   
-		&:hover {
-			background-position: 50% 100%;
-		}
-  	}
-	&--yt {
-	    background-position: 100% 0%;
-		&:hover {
-			background-position: 100% 100%;
-		}
-  	}
+	&--fb svg {
+		width: 9px;
+		height: 19px;
+		margin-top: 14px;
+  }
+	&--yt svg {
+		width: 20px;
+		height: 14px;
+		margin-top: 17px;	
+  }
 }
 

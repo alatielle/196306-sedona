@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Форма отзыва</title>
   </head>
@@ -34,7 +35,7 @@
             <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
             <img src="img/logo-sedona-mobile.svg" width="103" height="83" alt="City of Sedona">
-          <picture>
+          </picture>
         </div>
         <div class="page-header__top-menu">
         </div>
@@ -48,7 +49,8 @@
           <div class="review__header">
             <h2 class="review__title">Оставьте свой отзыв</h2>
             <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также
-               о посещенных вами достопримечательностях</p>
+               о посещенных вами достопримечательностях
+             </p>
           </div>
 
           <form class="review__form">
@@ -122,25 +124,33 @@
               <div class="review__wrapper">
       	      	<label class="review__checkbox">
       	      		<input type="checkbox" name="visited-bridge" id="review-visited-bridge" checked>
-      	      		<span class="review__checkbox-indicator"></span>
+      	      		<span class="review__checkbox-indicator">
+                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>  
+                  </span>
       	      		Мост Дьявола
       	      	</label>
 
       	      	<label class="review__checkbox">
       	      		<input type="checkbox" name="visited-park" id="review-visited-park" checked>
-      	      		<span class="review__checkbox-indicator"></span>
+      	      		<span class="review__checkbox-indicator">
+                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>  
+                  </span>
       	      		Слайд-парк
       	      	</label>
 
       	      	<label class="review__checkbox">
       	      		<input type="checkbox" name="visited-mountain" id="review-visited-mountain">
-      	      		<span class="review__checkbox-indicator"></span>
+      	      		<span class="review__checkbox-indicator">
+                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg> 
+                  </span>
       	      		Гора-Колокол
       	      	</label>
 
       	      	<label class="review__checkbox">
       	      		<input type="checkbox" name="visited-rocks" id="review-visited-rocks" checked>
-      	      		<span class="review__checkbox-indicator"></span>
+      	      		<span class="review__checkbox-indicator">
+                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>
+                  </span>
       	      		Красные скалы
       	      	</label>
               </div>
@@ -184,15 +194,25 @@
         <h2 class="page-footer__title">#visitsedona</h2>
         <p class="page-footer__social">
           <span class="social-links">
-            <a href="#" class="social-link  social-link--tw">Наш твиттер</a>
-            <a href="#" class="social-link  social-link--fb">Наш фэйсбук</a>
-            <a href="#" class="social-link  social-link--yt">Наш ютьюб</a>
+            <a href="#" class="social-link  social-link--tw">
+              <svg><use xlink:href="/img/symbols.svg#icon-twitter"></use></svg>
+              Наш твиттер
+            </a>
+            <a href="#" class="social-link  social-link--fb">
+              <svg><use xlink:href="/img/symbols.svg#icon-facebook"></use></svg>
+              Наш фэйсбук
+            </a>
+            <a href="#" class="social-link  social-link--yt">
+              <svg><use xlink:href="/img/symbols.svg#icon-youtube"></use></svg>
+              Наш ютьюб
+            </a>
           </span>
         </p>
         <p class="page-footer__copyright">
           <span>Разработано</span>
           <a href="https://htmlacademy.ru" class="page-footer__copyright-link" target="_blank">
-          HTML Aсademy
+            <svg><use xlink:href="/img/symbols.svg#htmlacademy"></use></svg>
+            HTML Aсademy
           </a>
         </p>
       </footer>
@@ -200,44 +220,42 @@
     </div>
 
     <script>
-      var navMain = document.querySelector('.main-nav');
-      var navToggle = document.querySelector('.main-nav__toggle');
-      navMain.classList.remove('main-nav--nojs');
+      var navMain = document.querySelector(".main-nav");
+      var navToggle = document.querySelector(".main-nav__toggle");
+      navMain.classList.remove("main-nav--nojs");
 
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
+      navToggle.addEventListener("click", function() {
+        if (navMain.classList.contains("main-nav--closed")) {
+          navMain.classList.remove("main-nav--closed");
+          navMain.classList.add("main-nav--opened");
         } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
+          navMain.classList.add("main-nav--closed");
+          navMain.classList.remove("main-nav--opened");
         }
       });
     </script>
     <script>
-      var btn = document.querySelector('.btn');
-      btn.addEventListener('click', function() {
-          btn.classList.add('in-progress');
-
+      var btn = document.querySelector(".btn");
+      btn.addEventListener("click", function() {
+          btn.classList.add("in-progress");
       });
     </script>
 
     <script>
-    var selectNotHidden = function(elements) {
-      for (var i = 0; i < elements.length; i++) {
-        if(!elements[i].matches('.visually-hidden')) {
-          return elements[i];
+      var selectNotHidden = function(elements) {
+        for (var i = 0; i < elements.length; i++) {
+          if(!elements[i].matches(".visually-hidden")) {
+            return elements[i];
+          }
         }
-      }
-    };
-      var popupWindows = document.querySelectorAll('.review__popup-overlay');
-      //var btnsClose = document.querySelectorAll('.review__popup-close');
-      
+      };
+      var popupWindows = document.querySelectorAll(".review__popup-overlay");
+        
       var popupWindow = selectNotHidden(popupWindows);
-      var btnClose = popupWindow.querySelector('button');
+      var btnClose = popupWindow.querySelector("button");
 
-      btnClose.addEventListener('click', function() {
-          popupWindow.classList.add('visually-hidden');
+      btnClose.addEventListener("click", function() {
+        popupWindow.classList.add("visually-hidden");
       });
     </script>
 

@@ -17,7 +17,7 @@
             <ul class="main-nav__items">
               <li class="main-nav__item">
                 <a href="index.html">Главная</a>
-              </li>           
+              </li>
               <li class="main-nav__item">
                 <a href="photo.html">Фото и видео</a>
               </li>
@@ -125,7 +125,7 @@
       	      	<label class="review__checkbox">
       	      		<input type="checkbox" name="visited-bridge" id="review-visited-bridge" checked>
       	      		<span class="review__checkbox-indicator">
-                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>  
+                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>
                   </span>
       	      		Мост Дьявола
       	      	</label>
@@ -133,7 +133,7 @@
       	      	<label class="review__checkbox">
       	      		<input type="checkbox" name="visited-park" id="review-visited-park" checked>
       	      		<span class="review__checkbox-indicator">
-                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>  
+                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>
                   </span>
       	      		Слайд-парк
       	      	</label>
@@ -141,7 +141,7 @@
       	      	<label class="review__checkbox">
       	      		<input type="checkbox" name="visited-mountain" id="review-visited-mountain">
       	      		<span class="review__checkbox-indicator">
-                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg> 
+                    <svg><use xlink:href="/img/symbols.svg#icon-tick"></use></svg>
                   </span>
       	      		Гора-Колокол
       	      	</label>
@@ -176,7 +176,7 @@
             </div>
           </div>
 
-          <div class="review__popup-overlay">
+          <div class="review__popup-overlay  visually-hidden">
             <div class="review__popup  review__popup--success">
               <h2 class="review__popup-message">Ваш отзыв отправлен</h2>
               <p class="review__popup-message-details">
@@ -190,7 +190,7 @@
 
       </main>
 
-      <footer class="page-footer">  
+      <footer class="page-footer">
         <h2 class="page-footer__title">#visitsedona</h2>
         <p class="page-footer__social">
           <span class="social-links">
@@ -250,7 +250,7 @@
         }
       };
       var popupWindows = document.querySelectorAll(".review__popup-overlay");
-        
+
       var popupWindow = selectNotHidden(popupWindows);
       var btnClose = popupWindow.querySelector("button");
 

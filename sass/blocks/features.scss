@@ -1,4 +1,6 @@
 .features {
+  width: 100%;
+
   display: block;
   background-color: white;
 
@@ -37,7 +39,7 @@
 
   font-size: 14px;
   line-height: 21px;
-  color: #333;    
+  color: #333;
 }
 
 .features__item {
@@ -58,9 +60,9 @@
   }
   &--food {
     background-image: url("../img/icon-burger.svg");
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
     background-size: 40px 35px;
-    background-position: 0px 23px;      
+    background-position: 0px 23px;
   }
 
 }
@@ -73,7 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     text-align: center;
   }
 
@@ -86,7 +88,7 @@
   }
 
   .features__item p {
-    padding: 0 45px;    
+    padding: 0 45px;
   }
 
   .features__item {
@@ -115,9 +117,9 @@
     }
 
     &--food  p {
-      padding: 0 50px;     
+      padding: 0 50px;
     }
-    
+
   }
 
 }

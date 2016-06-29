@@ -1,7 +1,3 @@
-@import
-  'utils/mixins',
-  'utils/variables';
-
 .review {
   @include container();
   background: white;
@@ -197,11 +193,11 @@
   }
 
   .review__input--tel {
-    background-image: url('../img/icon-phone.svg');
+    background-image: url("../img/icon-phone.svg");
   }
 
   .review__input--email {
-    background-image: url('../img/icon-mail.svg');
+    background-image: url("../img/icon-mail.svg");
   }
 
 }

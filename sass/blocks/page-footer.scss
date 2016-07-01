@@ -8,7 +8,7 @@
   background-color: white;
 }
 
-.page-footer__title {
+.page-footer__hashtag {
   margin: 0;
   padding-bottom: 21px;
 
@@ -34,7 +34,7 @@
 .page-footer__copyright span,
 .page-footer__copyright-link {
   display: inline-block;
-  vertical-align: middle; 
+  vertical-align: middle;
 }
 
 .page-footer__copyright-link {
@@ -64,7 +64,7 @@
 .page-footer__copyright span {
   font-size: 14px;
   line-height: 26px;
-  color: #000;  
+  color: #000;
 }
 
 
@@ -80,17 +80,17 @@
     align-items: center;
   }
 
-  .page-footer__title, 
+  .page-footer__hashtag,
   .page-footer__social,
   .page-footer__copyright {
     margin: 0;
-    padding: 0;   
+    padding: 0;
     width: 33%;
   }
 }
 
 @media #{$desktop-widths} {
-  .page-footer__title, 
+  .page-footer__hashtag,
   .page-footer__social,
   .page-footer__copyright {
     padding: 0 44px;

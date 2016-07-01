@@ -494,6 +494,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     border-left: 1px solid $border-color;
 
     .review__legend {
+      width: 320px;
       padding: 0;
       left: 56px;
       top: -5px;
@@ -545,6 +546,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     border-top: none;
 
     .review__legend {
+      width: 320px;
       padding: 0;
       left: 0px;
       top: -5px;

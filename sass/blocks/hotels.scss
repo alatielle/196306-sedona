@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
 
+  font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -69,7 +70,7 @@
   }
 
   .hotels__intro {
-    padding: 31px 105px 0;
+    padding: 25px 105px 0;
   }
 
   .hotels__intro br {
@@ -99,7 +100,8 @@
   }
 
   .hotels__intro {
-    padding: 31px 320px 0;
+    padding-left: 320px;
+    padding-right: 320px;
   }
 
   .hotels__map {

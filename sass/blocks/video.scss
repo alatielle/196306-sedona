@@ -14,7 +14,7 @@
 
   p {
     margin: 0;
-    padding-top: 10px;
+    padding-top: 26px;
 
     font-size: 14px;
     line-height: 24px;
@@ -24,6 +24,10 @@
 }
 
 .video__title {
+  display: block;
+  padding-top: 14px;
+
+  font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -219,7 +223,7 @@
     padding-left: 170px;
 
     p {
-      padding-top: 7px;
+      padding-top: 30px;
     }
 
   }
@@ -231,6 +235,7 @@
   }
 
   .video__title {
+    padding-top: 26px;
     font-size: 30px;
   }
 
@@ -301,11 +306,6 @@
     padding-right: 380px;
     padding-bottom: 71px;
     padding-left: 380px;
-
-    p {
-      padding-top: 6px;
-    }
-
   }
 
   .video__wrapper {

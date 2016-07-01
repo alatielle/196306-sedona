@@ -1,6 +1,6 @@
 .video {
   @include container();
-  background-color: white;
+  background-color: #fff;
 }
 
 .video__header {
@@ -20,6 +20,7 @@
     line-height: 24px;
     color: #333;
   }
+
 }
 
 .video__title {
@@ -47,6 +48,12 @@
   display: block;
 
   background: #e6a18b url("../img/video-mobile@1x.jpg") no-repeat;
+
+  z-index: 99999999;
+
+  &::-webkit-media-controls {
+    display: none !important;
+  }
 }
 
 .video__controls {
@@ -147,6 +154,7 @@
   input[type=range]::-ms-tooltip {
     display: none;
   }
+
 }
 
 .video__controls-button:nth-of-type(2) {
@@ -165,9 +173,11 @@
     height: 20px;
     fill: #5c6870;
   }
+
   &:hover svg {
     fill: #333;
   }
+
   &:active svg {
     fill: #c1c1c1;
   }
@@ -248,13 +258,15 @@
     margin: 0;
 
     svg {
-      fill: white;
+      fill: #fff;
     }
+
     &:hover svg {
-      fill: white;
+      fill: #fff;
     }
+
     &:active svg {
-      fill: white;
+      fill: #fff;
       opacity: 0.3;
     }
 
@@ -279,6 +291,7 @@
 
     background-color: transparent;
   }
+
 }
 
 @media #{$desktop-widths} {
@@ -315,6 +328,7 @@
   .video__controls-range {
     width: 540px;
   }
+
 }
 
 

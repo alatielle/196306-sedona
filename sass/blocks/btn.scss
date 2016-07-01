@@ -10,7 +10,6 @@ $color-to: #3e84ae;
 }
 
 .btn {
-
   outline: none;
 
   height: 58px;
@@ -39,17 +38,19 @@ $color-to: #3e84ae;
   &:active {
     background-color: $accent-color-down;
     color: rgba(255,255,255,0.3);
+    outline: none;
   }
 
   &[disabled] {
     background-color: #e5e5e5;
     cursor: not-allowed;
   }
+
 }
 
 .in-progress {
-    animation-name: blink;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

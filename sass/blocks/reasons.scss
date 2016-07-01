@@ -1,5 +1,6 @@
 .reasons {
   @include container();
+  background-color: #fff;
 }
 
 .reasons__header {
@@ -9,9 +10,7 @@
   padding-left: 20px;
 
   text-transform: uppercase;
-  text-align: center;  
-
-  background-color: white;
+  text-align: center;
 }
 
 .reasons__title {
@@ -21,7 +20,7 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: black;
+  color: #000;
 }
 
 .reasons__intro {
@@ -38,8 +37,14 @@
   padding: 0;
 
   list-style: none;
-
   background-color: #eee;
+}
+
+.reasons__item-card {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .reasons__item-title {
@@ -55,62 +60,58 @@
   text-align: center;
 }
 
-.reasons__item-number {
+.reasons__item-number,
+.reasons__item-text {
   margin: 0;
-  padding: 0;
+  padding: 9px 15px 6px;
 }
 
-.reasons__item-card {
-  text-align: center;
-  text-transform: uppercase;
-
-  p {
-    margin: 0;
-    padding: 8px 15px;
-
-    font-size: 14px;
-    line-height: 21px;
-  }
+.reasons__item-title br,
+.reasons__item-text br {
+  display: none;
 }
 
 .reasons__item {
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 26px;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
 
   border-bottom: 1px solid #d6d6d6;
 
-  &:first-child{
-    padding-top: 78px;
+  &:first-child {
+    padding-top: 77px;
     background-image: url("../img/bg-triangle.svg");
     background-repeat: no-repeat;
     background-position: top;
   }
 
-  &:last-child{
+  &:last-child {
     padding-bottom: 19px;
     border-bottom: none;
   }
+
 }
 
 .reasons__item--featured {
   margin-left: 0;
   margin-right: 0;
   padding-top: 39px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
 
   color: #fff;
 
   border-bottom: none;
   background-color: $accent-color;
 
-  h3 {
+  .reasons__item-title {
     color: #fff;
   }
 
-  p {
-    padding: 8px 25px;
+  .reasons__item-number,
+  .reasons__item-text {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 
   img {
@@ -119,9 +120,10 @@
     display: block;
 
     margin: 0 auto;
-    margin-top: 32px;
+    margin-top: 34px;
     padding: 0;
   }
+
 }
 
 
@@ -131,7 +133,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 100px;
-    padding-right: 100px;;
+    padding-right: 100px;
   }
 
   .reasons__title {
@@ -158,9 +160,11 @@
       padding-top: 0;
       background-image: none;
     }
+
     &:last-child {
       padding-bottom: 0;
     }
+
   }
 
   .reasons__item--featured {
@@ -184,42 +188,77 @@
       height: 256px;
       margin: 0;
     }
+
+    .reasons__item-text {
+      padding-left: 45px;
+      padding-right: 45px;
+    }
+
   }
 
   .reasons__item--featured:nth-of-type(2n+3) .reasons__item-picture {
     order: -1;
   }
 
-  .reasons__item-card p {
-    padding: 8px 45px 13px;
-    hyphens: manual;
-  }
-
   .reasons__item-title {
-    padding: 45px 50px 2px;
+    padding: 45px 50px 1px;
     font-size: 21px;
   }
 
+  .reasons__item-text {
+    padding: 15px 45px 13px;
+    hyphens: manual;
+  }
+
+  .reasons__item-title br,
+  .reasons__item-text br {
+    display: inline;
+  }
 
 }
 
 
 @media #{$desktop-widths} {
+
   .reasons__title {
     padding: 0 250px 28px;
   }
 
-  .reasons__item--featured  .reasons__item-title {
-    padding: 52px 100px 2px;
-    font-size: 21px;
+  .reasons__item--featured {
+
+    .reasons__item-title {
+      padding-top: 52px;
+    }
+
+    .reasons__item-text {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
   }
-  .reasons__item--featured p {
-    padding: 8px 60px 13px;      
+
+  .reasons__item--featured:first-child .reasons__item-text {
+    padding-left: 60px;
+    padding-right: 60px;
   }
+
   .reasons__item-title {
-    padding: 45px 120px 2px;    
+    padding-left: 120px;
+    padding-right: 120px;
   }
-  .reasons__item-card p {
-    padding: 8px 60px 13px;      
+
+  .reasons__item-text {
+    padding-left: 60px;
+    padding-right: 60px;
   }
+
+  /* Т.к. первая строка в 3-м пункте короче второй, делаем перенос */
+  .reasons__item:nth-of-type(4) .reasons__item-text {
+    text-indent: 4px;
+  }
+
+  .reasons__item-text br {
+    display: none;
+  }
+
 }

@@ -2,21 +2,22 @@
   width: 100%;
 
   display: block;
-  background-color: white;
+
+  background-color: #fff;
 
   text-transform: uppercase;
   text-align: left;
 }
 
 .features__list {
-	margin: 0;
+  margin: 0;
 
   padding-left: 18px;
   padding-right: 20px;
   padding-top: 9px;
   padding-bottom: 38px;
 
-	list-style: none;
+  list-style: none;
 }
 
 .features__title {
@@ -26,10 +27,10 @@
   padding-bottom: 14px;
   padding-left: 52px;
 
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 26px;
-	color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
 }
 
 .features__item p {
@@ -49,15 +50,19 @@
     background-repeat: no-repeat;
     background-size: 40px 36px;
     background-position: 3px 17px;
-
   }
+
   &--souvenirs {
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-size: 32px 38px;
     background-position: 7px 16px;
 
+    br {
+      display: none;
+    }
   }
+
   &--food {
     background-image: url("../img/icon-burger.svg");
     background-repeat: no-repeat;
@@ -69,6 +74,7 @@
 
 
 @media #{$tablet-widths} {
+
   .features__list {
     padding: 0;
 
@@ -116,7 +122,8 @@
       background-position: 50% 62px;
     }
 
-    &--food  p {
+    /* текст абзаца в Еде шире остальных */
+    &--food p {
       padding: 0 50px;
     }
 
@@ -127,11 +134,11 @@
 @media #{$desktop-widths} {
 
   .features__item p {
-      padding: 0 50px;
-    }
+    padding: 0 50px;
+  }
 
-  .features__item--souvenirs p {
-      padding: 0 100px;
+  .features__item--souvenirs br {
+    display: inline;
   }
 
 }

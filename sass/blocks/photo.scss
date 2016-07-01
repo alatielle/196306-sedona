@@ -1,6 +1,6 @@
 .photo {
   @include container();
-  background-color: white;
+  background-color: #fff;
 }
 
 .photo__header {
@@ -48,8 +48,9 @@
   border-top: 1px solid $border-color;
 
   &:last-child {
-   border-bottom: 1px solid $border-color;    
+   border-bottom: 1px solid $border-color;
   }
+
 }
 
 .photo__image {
@@ -64,6 +65,7 @@
       width: 280px;
       height: 280px;
   }
+
 }
 
 .photo__description-box {
@@ -115,6 +117,7 @@
     width: 22px;
     height: 20px;
   }
+
 }
 
 .photo__likes-count {
@@ -179,7 +182,7 @@
     background-color: #f2f2f2;
 
     &:last-child {
-     border-bottom: none;    
+     border-bottom: none;
     }
 
     &:nth-child(odd) {
@@ -196,11 +199,13 @@
       width: 100%;
       height: 400px;
     }
+
   }
 
 }
 
 @media #{$desktop-widths} {
+
   .photo__header {
     padding: 112px 380px 70px;
   }
@@ -209,7 +214,7 @@
     padding-bottom: 31px;
     font-size: 30px;
   }
-  
+
   .photo__list {
     padding: 0;
   }
@@ -243,11 +248,11 @@
   .photo__caption,
   .photo__author,
   .photo__likes-count {
-    color: white;
+    color: #fff;
   }
 
   .photo__likes-icon svg {
-    fill: white;
+    fill: #fff;
   }
 
 }

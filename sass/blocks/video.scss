@@ -1,6 +1,6 @@
 .video {
   @include container();
-  background-color: #fff;
+//  background-color: #fff;
 }
 
 .video__header {
@@ -183,7 +183,7 @@
   }
 
   &:active svg {
-    fill: #c1c1c1;
+    fill: rgba(51,51,51,0.3);
   }
 
 }

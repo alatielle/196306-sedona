@@ -1,6 +1,6 @@
 .review {
   @include container();
-  background: white;
+  background: #fff;
 }
 
 .review__header {
@@ -50,12 +50,15 @@
   &::placeholder {
     opacity: 1;
   }
+
   &::-webkit-input-placeholder {
     opacity: 1;
   }
+
   &:-moz-placeholder {
     opacity: 1;
   }
+
   &:-ms-input-placeholder {
     opacity: 1;
   }
@@ -65,25 +68,27 @@
   }
 
   &:focus {
-    background-color: white;
+    background-color: #fff;
     border: 4px solid #e5e5e5;
     padding-left: 18px;
     padding-right: 18px;
   }
+
 }
 
 .review__input--textarea {
   box-sizing: border-box;
-  width: 280px;
+  width: 279px;
   min-height: 160px;
 
-  padding: 22px;
+  padding: 18px 20px;
 
   resize: vertical;
 
   &:focus {
-    padding: 18px;
+    padding: 14px 16px;
   }
+
 }
 
 .review__title {
@@ -120,6 +125,8 @@
 }
 
 .review__legend {
+  width: 100%;
+
   margin: 0;
   padding: 0;
 
@@ -158,6 +165,7 @@
     width: 50%;
     flex-grow: 1;
   }
+
 }
 
 .review__fieldset--contacts {
@@ -172,7 +180,7 @@
     padding: 6px 22px 11px;
   }
 
-  .review__error p {
+  .review__error-message {
     margin: 0;
     padding: 0;
 
@@ -199,7 +207,9 @@
     &--email {
       background-image: url("../img/icon-mail.svg");
     }
+
   }
+
 }
 
 .review__fieldset--impression {
@@ -212,6 +222,7 @@
 
 .review__fieldset--emotions {
   border: none;
+  padding-top: 41px;
   padding-bottom: 41px;
 }
 
@@ -231,6 +242,7 @@
   input {
     display: none;
   }
+
 }
 
 .review__radio {
@@ -260,6 +272,7 @@
     border-color: #d5d5d5;
     background-color: #d5d5d5;
   }
+
 }
 
 input[type="radio"]:checked ~ .review__radio-indicator {
@@ -268,6 +281,7 @@ input[type="radio"]:checked ~ .review__radio-indicator {
   &:active {
     background-color: #a4a4a4;
   }
+
 }
 
 .review__checkbox-indicator {
@@ -299,6 +313,7 @@ input[type="radio"]:checked ~ .review__radio-indicator {
 }
 
 input[type="checkbox"]:checked ~ .review__checkbox-indicator {
+
   svg {
     fill: #333;
   }
@@ -306,10 +321,118 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   &:active svg {
     opacity: 0.3;
   }
+
+}
+
+.review__popup-overlay {
+  position: fixed;
+  left: 2px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+
 }
 
 .review__popup {
-  display: none;
+  display: inline-block;
+  vertical-align: middle;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  background-color: #fff;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
+}
+
+.review__popup-message {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 26px;
+
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
+  font-weight: bold;
+}
+
+.review__popup-message-details {
+  margin: 0;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+}
+
+.review__popup--fail {
+  width: 320px;
+  height: 280px;
+
+  padding-top: 40px;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  position: relative;
+
+  .review__popup-close {
+    width: 180px;
+
+    position: absolute;
+
+    bottom: 35px;
+    left: 70px;
+  }
+
+}
+
+.review__popup--success {
+  width: 320px;
+  height: 323px;
+
+  padding-top: 43px;
+  padding-left: 52px;
+  padding-right: 52px;
+
+  position: relative;
+
+  .review__popup-close {
+    width: 280px;
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 98px;
+    background: #f2f2f2;
+  }
+
 }
 
 .review__write {
@@ -328,6 +451,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     p {
       padding: 31px 145px 0;
     }
+
   }
 
   .review__legend {
@@ -338,11 +462,11 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     top: -13px;
 
     font-size: 21px;
-    background-color: white;
+    background-color: #fff;
+  }
 
-    span {
-      display: none;
-    }
+  .review__polite-msg {
+    display: none;
   }
 
   .review__form {
@@ -369,12 +493,14 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     border-left: 1px solid $border-color;
 
     .review__legend {
+      width: 320px;
       padding: 0;
       left: 56px;
       top: -5px;
       transform: translateX(0);
       text-align: left;
     }
+
   }
 
   .review__fieldset--contacts {
@@ -389,24 +515,24 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
 
-    .review__label {
-      order: 1;
-    }
+  .review__fieldset--contacts .review__label {
+    order: 1;
+  }
 
-    .review__input {
-      width: 100%;
-      order: 3;
-    }
+  .review__fieldset--contacts .review__input {
+    width: 100%;
+    order: 3;
+  }
 
-    .review__error {
-      order: 2;
-      padding: 0;
-    }
+  .review__fieldset--contacts .review__error {
+    order: 2;
+    padding: 0;
+  }
 
-    .review__error p {
-      float: right;
-    }
+  .review__fieldset--contacts .review__error-message {
+    float: right;
   }
 
   .review__fieldset--impression {
@@ -418,12 +544,14 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     border-top: none;
 
     .review__legend {
+      width: 320px;
       padding: 0;
       left: 0px;
       top: -5px;
       transform: translateX(0);
       text-align: left;
     }
+
   }
 
   .review__fieldset--impression .review__radio-indicator {
@@ -436,6 +564,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     &:last-child{
       margin-bottom: 0px;
     }
+
   }
 
   .review__fieldset--sights {
@@ -449,28 +578,30 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     .review__legend {
       top: -26px;
     }
+
   }
 
   .review__fieldset--sights .review__wrapper {
     display: flex;
     flex-wrap: wrap;
+  }
 
-    .review__checkbox {
-      min-width: 259px;
-      margin-top: 10px;
-    }
+  .review__fieldset--sights .review__checkbox {
+    min-width: 259px;
+    margin-top: 10px;
 
-    .review__checkbox:nth-child(2) {
+    &:nth-child(2) {
       order: 3;
     }
 
-    .review__checkbox:nth-child(3) {
+    &:nth-child(3) {
       order: 2;
     }
 
-    .review__checkbox:nth-child(4) {
+    &:nth-child(4) {
       order: 4;
     }
+
   }
 
   .review__fieldset--emotions {
@@ -490,120 +621,58 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     width: 324px;
   }
 
-  .review__popup-message {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 30px;
-
-    font-size: 30px;
-    line-height: 26px;
-    color: #000;
-    font-weight: bold;
-  }
-
-  .review__popup-message-details {
-    margin: 0;
-    padding: 0;
-
-    font-size: 14px;
-    line-height: 24px;
-    color: #333;
-  }
-
-  .review__popup-overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    text-align: center;
-
-    &::after {
-      content: "";
-
-      display: inline-block;
-      width: 0;
-      height: 100%;
-      vertical-align: middle;
-    }
-  }
-
   .review__popup {
-    display: inline-block;
-    vertical-align: middle;
-
-    box-sizing: border-box;
-
-    margin: 0 auto;
-    padding-top: 54px;
     padding-left: 112px;
     padding-right: 112px;
+  }
 
-    background-color: white;
-
-    text-align: center;
-    text-transform: uppercase;
-
-    box-shadow: 0 7px 15px 0 rgba(0,1,1,0.15);
+  .review__popup-message {
+    padding-bottom: 30px;
+    font-size: 30px;
   }
 
   .review__popup--fail {
     width: 400px;
     height: 347px;
 
+    padding-top: 55px;
     padding-left: 60px;
     padding-right: 60px;
-
-    position: relative;
 
     .review__popup-message {
       line-height: 40px;
 
       padding-left: 30px;
       padding-right: 30px;
+      padding-bottom: 24px;
     }
 
     .review__popup-close {
       width: 272px;
 
-      position: absolute;
-
       bottom: 49px;
       left: 64px;
     }
+
   }
 
   .review__popup--success {
     width: 640px;
     height: 347px;
 
-    padding-top: 64px;
-    padding-left: 112px;
-    padding-right: 112px;
-
-    position: relative;
+    padding-top: 63px;
 
     .review__popup-close {
       width: 458px;
-
-      position: absolute;
 
       bottom: 44px;
       left: 92px;
     }
 
     &::before {
-      content: "";
-
-      position: absolute;
-      left: 0;
-      bottom: 0;
-
-      width: 100%;
       height: 146px;
-      background: #f2f2f2;
     }
+
   }
 
   .review__required-fields {
@@ -622,6 +691,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       text-align: right;
       text-transform: uppercase;
     }
+
   }
 
   .review__title {
@@ -639,6 +709,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     p {
       padding: 31px 360px 0;
     }
+
   }
 
   .review__form {
@@ -656,7 +727,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       left: 79px;
     }
 
-    .review__legend span {
+    .review__polite-msg {
       display: inline;
     }
   }
@@ -690,7 +761,11 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       flex-grow: 1;
     }
 
-    .review__label span {
+  }
+
+  .review__fieldset--contacts {
+
+    .review__label-contact {
       display: none;
     }
 
@@ -709,22 +784,17 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       width: 100%;
     }
 
-    .review__error p {
+    .review__error-message {
       padding-left: 106px;
       float: none;
     }
+
   }
 
   .review__fieldset--sights {
     padding-top: 70px;
     padding-left: 0;
     margin-bottom: 77px;
-  }
-
-  .review__fieldset--sights .review__wrapper {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
 
     .review__checkbox {
       margin: 0;
@@ -733,13 +803,18 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     }
   }
 
+  .review__fieldset--sights .review__wrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
   .review__input--textarea {
     width: 960px;
-    min-width: 960px;
-    max-width: 960px;
   }
 
   .review__write {
     width: 480px;
   }
+
 }

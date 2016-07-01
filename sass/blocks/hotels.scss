@@ -1,6 +1,6 @@
 .hotels {
-  background-color: white;
   @include container();
+  background-color: #fff;
 }
 
 .hotels__header {
@@ -11,16 +11,6 @@
 
   text-transform: uppercase;
   text-align: center;
-
-  p {
-    margin: 0;
-    padding: 0;
-    padding-top: 19px;
-
-    font-size: 14px;
-    line-height: 24px;
-    color: #333;
-  }
 }
 
 .hotels__title {
@@ -33,15 +23,29 @@
   color: #000;
 }
 
+.hotels__intro {
+  margin: 0;
+  padding: 0;
+  padding-top: 19px;
+
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+}
+
+.hotels__intro br {
+  display: none;
+}
+
 .hotels__map {
   width: 320px;
   height: 350px;
 
   margin: 49px auto 0px;
 
-  background: 
+  background:
     url("../img/icon-map-marker.svg") no-repeat 50%,
-    url("../img/bg-map-mobile@1x.jpg") no-repeat;
+    #f3f1ed url("../img/bg-map-mobile@1x.jpg") no-repeat;
 }
 
 .hotels__find {
@@ -60,12 +64,16 @@
     padding-right: 50px;
   }
 
-  .hotels__header p {
-      padding: 31px 130px 0;
-  }
-
   .hotels__title {
     font-size: 30px;
+  }
+
+  .hotels__intro {
+    padding: 31px 105px 0;
+  }
+
+  .hotels__intro br {
+    display: inline;
   }
 
   .hotels__map {
@@ -73,40 +81,34 @@
 
     margin: 58px auto 0px;
 
-    background-image: 
+    background-image:
       url("../img/icon-map-marker.svg"),
       url("../img/bg-map-tablet@1x.jpg");
   }
 
   .hotels__find {
-    width: 348px;
+    width: 458px;
   }
+
 }
 
 @media #{$desktop-widths} {
-
-  .hotels {
-    min-height: 681px;
-  }
 
   .hotels__header {
     padding-bottom: 47px;
   }
 
-  .hotels__header p {
-    padding: 31px 350px 0;
+  .hotels__intro {
+    padding: 31px 320px 0;
   }
 
   .hotels__map {
     margin: 66px auto 0px;
 
-    background-image: 
+    background-image:
       url("../img/icon-map-marker.svg"),
       url("../img/bg-map-desktop@1x.jpg");
   }
 
-  .hotels__find {
-    width: 457px;
-  }
 }
 

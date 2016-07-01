@@ -180,7 +180,7 @@
     padding: 6px 22px 11px;
   }
 
-  .review__error p {
+  .review__error-message {
     margin: 0;
     padding: 0;
 
@@ -463,11 +463,10 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
     font-size: 21px;
     background-color: #fff;
+  }
 
-    span {
-      display: none;
-    }
-
+  .review__polite-msg {
+    display: none;
   }
 
   .review__form {
@@ -516,25 +515,24 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
 
-    .review__label {
-      order: 1;
-    }
+  .review__fieldset--contacts .review__label {
+    order: 1;
+  }
 
-    .review__input {
-      width: 100%;
-      order: 3;
-    }
+  .review__fieldset--contacts .review__input {
+    width: 100%;
+    order: 3;
+  }
 
-    .review__error {
-      order: 2;
-      padding: 0;
-    }
+  .review__fieldset--contacts .review__error {
+    order: 2;
+    padding: 0;
+  }
 
-    .review__error p {
-      float: right;
-    }
-
+  .review__fieldset--contacts .review__error-message {
+    float: right;
   }
 
   .review__fieldset--impression {
@@ -586,21 +584,21 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   .review__fieldset--sights .review__wrapper {
     display: flex;
     flex-wrap: wrap;
+  }
 
-    .review__checkbox {
-      min-width: 259px;
-      margin-top: 10px;
-    }
+  .review__fieldset--sights .review__checkbox {
+    min-width: 259px;
+    margin-top: 10px;
 
-    .review__checkbox:nth-child(2) {
+    &:nth-child(2) {
       order: 3;
     }
 
-    .review__checkbox:nth-child(3) {
+    &:nth-child(3) {
       order: 2;
     }
 
-    .review__checkbox:nth-child(4) {
+    &:nth-child(4) {
       order: 4;
     }
 
@@ -729,7 +727,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       left: 79px;
     }
 
-    .review__legend span {
+    .review__polite-msg {
       display: inline;
     }
   }
@@ -763,7 +761,11 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       flex-grow: 1;
     }
 
-    .review__label span {
+  }
+
+  .review__fieldset--contacts {
+
+    .review__label-contact {
       display: none;
     }
 
@@ -782,7 +784,7 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       width: 100%;
     }
 
-    .review__error p {
+    .review__error-message {
       padding-left: 106px;
       float: none;
     }
@@ -793,19 +795,18 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     padding-top: 70px;
     padding-left: 0;
     margin-bottom: 77px;
-  }
-
-  .review__fieldset--sights .review__wrapper {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
 
     .review__checkbox {
       margin: 0;
       padding: 0;
       min-width: 172px;
     }
+  }
 
+  .review__fieldset--sights .review__wrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
   .review__input--textarea {

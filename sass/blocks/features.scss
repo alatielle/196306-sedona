@@ -44,7 +44,6 @@
 }
 
 .features__item {
-
   &--living {
     background-image: url("../img/icon-house.svg");
     background-repeat: no-repeat;
@@ -69,12 +68,10 @@
     background-size: 40px 35px;
     background-position: 0px 23px;
   }
-
 }
 
 
 @media #{$tablet-widths} {
-
   .features__list {
     padding: 0;
 
@@ -126,13 +123,10 @@
     &--food p {
       padding: 0 50px;
     }
-
   }
-
 }
 
 @media #{$desktop-widths} {
-
   .features__item p {
     padding: 0 50px;
   }
@@ -140,5 +134,4 @@
   .features__item--souvenirs br {
     display: inline;
   }
-
 }

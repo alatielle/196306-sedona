@@ -59,7 +59,6 @@
 
 
 @media #{$tablet-widths} {
-
   .page-header {
     min-height: 56px;
   }
@@ -99,12 +98,10 @@
         url("../img/bg-back-desktop@2x.jpg");
     }
   }
-
 }
 
 
 @media #{$desktop-widths} {
-
   .page-header__logo img {
     width: 188px;
     height: 96px;
@@ -143,5 +140,4 @@
         url("../img/bg-back-desktop@2x.jpg");
     }
   }
-
 }

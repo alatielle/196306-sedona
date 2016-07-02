@@ -57,7 +57,6 @@
 
 
 @media #{$tablet-widths} {
-
   .hotels__header {
     padding-top: 55px;
     padding-bottom: 42px;
@@ -90,11 +89,10 @@
   .hotels__find {
     width: 458px;
   }
-
 }
 
-@media #{$desktop-widths} {
 
+@media #{$desktop-widths} {
   .hotels__header {
     padding-bottom: 47px;
   }
@@ -111,6 +109,4 @@
       url("../img/icon-map-marker.svg"),
       url("../img/bg-map-desktop@1x.jpg");
   }
-
 }
-

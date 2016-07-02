@@ -73,7 +73,6 @@
     padding-left: 18px;
     padding-right: 18px;
   }
-
 }
 
 .review__input--textarea {
@@ -88,7 +87,6 @@
   &:focus {
     padding: 14px 16px;
   }
-
 }
 
 .review__title {
@@ -145,7 +143,6 @@
 }
 
 .review__fieldset--introduction {
-
   .review__field {
     display: flex;
     align-items: center;
@@ -165,7 +162,6 @@
     width: 50%;
     flex-grow: 1;
   }
-
 }
 
 .review__fieldset--contacts {
@@ -207,9 +203,7 @@
     &--email {
       background-image: url("../img/icon-mail.svg");
     }
-
   }
-
 }
 
 .review__fieldset--impression {
@@ -242,7 +236,6 @@
   input {
     display: none;
   }
-
 }
 
 .review__radio {
@@ -272,7 +265,6 @@
     border-color: #d5d5d5;
     background-color: #d5d5d5;
   }
-
 }
 
 input[type="radio"]:checked ~ .review__radio-indicator {
@@ -281,7 +273,6 @@ input[type="radio"]:checked ~ .review__radio-indicator {
   &:active {
     background-color: #a4a4a4;
   }
-
 }
 
 .review__checkbox-indicator {
@@ -313,7 +304,6 @@ input[type="radio"]:checked ~ .review__radio-indicator {
 }
 
 input[type="checkbox"]:checked ~ .review__checkbox-indicator {
-
   svg {
     fill: #333;
   }
@@ -321,7 +311,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   &:active svg {
     opacity: 0.3;
   }
-
 }
 
 .review__popup-overlay {
@@ -340,7 +329,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     height: 100%;
     vertical-align: middle;
   }
-
 }
 
 .review__popup {
@@ -399,7 +387,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     bottom: 35px;
     left: 70px;
   }
-
 }
 
 .review__popup--success {
@@ -432,7 +419,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     height: 98px;
     background: #f2f2f2;
   }
-
 }
 
 .review__write {
@@ -442,7 +428,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
 
 
 @media #{$tablet-widths} {
-
   .review__header {
     padding-top: 74px;
     padding-bottom: 58px;
@@ -451,7 +436,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     p {
       padding: 31px 145px 0;
     }
-
   }
 
   .review__legend {
@@ -500,7 +484,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       transform: translateX(0);
       text-align: left;
     }
-
   }
 
   .review__fieldset--contacts {
@@ -551,7 +534,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       transform: translateX(0);
       text-align: left;
     }
-
   }
 
   .review__fieldset--impression .review__radio-indicator {
@@ -564,7 +546,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     &:last-child{
       margin-bottom: 0px;
     }
-
   }
 
   .review__fieldset--sights {
@@ -578,7 +559,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     .review__legend {
       top: -26px;
     }
-
   }
 
   .review__fieldset--sights .review__wrapper {
@@ -601,7 +581,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     &:nth-child(4) {
       order: 4;
     }
-
   }
 
   .review__fieldset--emotions {
@@ -653,7 +632,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       bottom: 49px;
       left: 64px;
     }
-
   }
 
   .review__popup--success {
@@ -672,7 +650,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     &::before {
       height: 146px;
     }
-
   }
 
   .review__required-fields {
@@ -691,17 +668,15 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       text-align: right;
       text-transform: uppercase;
     }
-
   }
 
   .review__title {
     font-size: 30px;
   }
-
 }
 
-@media #{$desktop-widths} {
 
+@media #{$desktop-widths} {
   .review__header {
     padding-top: 112px;
     padding-bottom: 63px;
@@ -709,7 +684,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
     p {
       padding: 31px 360px 0;
     }
-
   }
 
   .review__form {
@@ -760,11 +734,9 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       margin-left: 79px;
       flex-grow: 1;
     }
-
   }
 
   .review__fieldset--contacts {
-
     .review__label-contact {
       display: none;
     }
@@ -788,7 +760,6 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
       padding-left: 106px;
       float: none;
     }
-
   }
 
   .review__fieldset--sights {
@@ -816,5 +787,4 @@ input[type="checkbox"]:checked ~ .review__checkbox-indicator {
   .review__write {
     width: 480px;
   }
-
 }

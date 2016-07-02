@@ -69,7 +69,6 @@
 
 
 @media #{$tablet-widths} {
-
   .page-footer {
     min-height: 48px;
 
@@ -88,11 +87,10 @@
     padding: 0;
     width: 33%;
   }
-
 }
 
-@media #{$desktop-widths} {
 
+@media #{$desktop-widths} {
   .page-footer__hashtag,
   .page-footer__social,
   .page-footer__copyright {
@@ -102,5 +100,4 @@
   .page-footer__copyright {
     text-align: right;
   }
-
 }
